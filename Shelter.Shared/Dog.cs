@@ -7,7 +7,7 @@ namespace Shelter.Shared
 
 		}
 
-		public Dog(int id, string name, dateTime dateOfBirth, bool isChecked, bool kidFriendly, dateTime since) : base(int id, string name, dateTime dateOfBirth, bool isChecked, bool kidFriendly, dateTime since)
+		public Dog(int id, string name, dateTime dateOfBirth, bool isChecked, bool kidFriendly, dateTime since) : base(id, name, dateOfBirth, isChecked, kidFriendly, since)
 		{
 
 		}

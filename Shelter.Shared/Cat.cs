@@ -7,7 +7,7 @@ namespace Shelter.Shared
 
 		}
 
-		public Cat(int id, string name, dateTime dateOfBirth, bool isChecked, bool kidFriendly, dateTime since) : base(int id, string name, dateTime dateOfBirth, bool isChecked, bool kidFriendly, dateTime since)
+		public Cat(int id, string name, dateTime dateOfBirth, bool isChecked, bool kidFriendly, dateTime since) : base(id, name, dateOfBirth, isChecked, kidFriendly, since)
 		{
 
 		}
