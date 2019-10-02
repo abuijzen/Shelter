@@ -1,13 +1,13 @@
 namespace Shelter.Shared
 {
-	class Hamster: Animals
+	class Hamster : Animals
 	{
 		public Hamster() : base()
 		{
 
 		}
 
-		public Hamster(int id, string name, dateTime dateOfBirth, bool isChecked, bool kidFriendly, dateTime since) : base(int id, string name, dateTime dateOfBirth, bool isChecked, bool kidFriendly, dateTime since)
+		public Hamster(int id, string name, dateTime dateOfBirth, bool isChecked, bool kidFriendly, dateTime since) : base(id, name, dateOfBirth, isChecked, kidFriendly, since)
 		{
 
 		}
