@@ -7,5 +7,9 @@ namespace ShelterShared
 
 		}
 
+		public Manager(string firstName, string lastName) : base(firstName, lastName)
+		{
+
+		}
 	}
 }
