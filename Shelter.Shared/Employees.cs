@@ -7,5 +7,10 @@ namespace ShelterShared
 
 		}
 
+		public Employees(string firstName, string lastName)
+		{
+
+		}
+
 	}
 }

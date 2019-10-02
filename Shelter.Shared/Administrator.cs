@@ -10,5 +10,10 @@ namespace ShelterShared
 
 		}
 
+		public Administrator(string firstName, string lastName) : base(firstName, lastName)
+		{
+
+		}
+
 	}
 }
