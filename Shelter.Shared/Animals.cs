@@ -7,7 +7,7 @@ namespace Shelter.Shared
     {
         public class Animal
         {
-            public Animal(int id, string name, string race,dateTime dateOfBirth, bool fertile,string kidFriendly,string animalFriendly, string speciesFriendly, dateTime since)
+            public Animal(int id, string name, string race,dateTime dateOfBirth, bool fertile,string kidFriendly, string animalFriendly, string speciesFriendly, dateTime since, string bio)
             {
                 Id=id;
                 Name=name;
@@ -18,6 +18,7 @@ namespace Shelter.Shared
                 AnimalFriendly=animalFriendly;
                 SpeciesFriendly=speciesFriendly;
                 Since=since;
+                Bio=bio;
             }
         }
     }
