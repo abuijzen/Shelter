@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ShelterShared
+namespace Shelter.Shared
 {
 	class Administrator
 	{

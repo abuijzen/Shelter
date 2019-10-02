@@ -1,4 +1,4 @@
-namespace ShelterShared
+namespace Shelter.Shared
 {
 	class Employees
 	{
