@@ -1,6 +1,6 @@
 namespace Shelter.Shared
 {
-	class Caretaker
+	class Caretaker : Employees
 	{
 		public Caretaker() : base()
 		{
