@@ -5,11 +5,6 @@ namespace Shelter.Shared
 {
     class Animals
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Animals Class 🐶🐱🐹");
-        }
-
         public class Animal
         {
             public Animal(int id, string name, dateTime dateOfBirth, bool isChecked, bool kidFriendly, dateTime since)
