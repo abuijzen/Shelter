@@ -20,7 +20,8 @@ namespace Shelter.Mvc.Controllers
 
         public IActionResult Index()
         {
-            return View(new AnimalViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var cat1 = new Cat(1, "Felix", "Britse Korthaar", new DateTime(2005, 10, 09), false, true, true, true, new DateTime(2007, 10, 09), "meow I'm a cat", "catnip", true);
+            return View(new AnimalViewModel {  });
         }
     }
 }
