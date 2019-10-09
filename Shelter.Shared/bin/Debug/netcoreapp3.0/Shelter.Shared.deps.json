@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "Shelter.Shared/1.0.0": {
+        "dependencies": {
+          "Shelter.Mvc": "1.0.0"
+        },
+        "runtime": {
+          "Shelter.Shared.dll": {}
+        }
+      },
+      "Shelter.Mvc/1.0.0": {
+        "runtime": {
+          "Shelter.Mvc.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Shelter.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shelter.Mvc/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

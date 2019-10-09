@@ -5,24 +5,24 @@ namespace Shelter.Shared
 {
 	class Rabbit : Animals
 	{
-		public Rabbit () : base()
+		/*public Rabbit() : base()
 		{
 
-		}
+		}*/
 
 		public Rabbit(int id,
-                            string name,
-                            string race,
-                            DateTime dateOfBirth,
-                            bool isFertile,
-                            bool isKidFriendly,
-                            bool isAnimalFriendly,
-                            bool isSpeciesFriendly,
-                            DateTime since,
-                            string bio,
-                            string allergies,
+							string name,
+							string race,
+							DateTime dateOfBirth,
+							bool isFertile,
+							bool isKidFriendly,
+							bool isAnimalFriendly,
+							bool isSpeciesFriendly,
+							DateTime since,
+							string bio,
+							string allergies,
 							string size) /*extra toegevoegde data */
-			: base(	id,name,
+			: base(id, name,
 							race,
 							dateOfBirth,
 							isFertile,
@@ -31,9 +31,10 @@ namespace Shelter.Shared
 							isSpeciesFriendly,
 							since,
 							bio,
-							allergies){
+							allergies)
+		{
 
 		}
-public string size { get; set; }
+		public string size { get; set; }
 	}
 }
