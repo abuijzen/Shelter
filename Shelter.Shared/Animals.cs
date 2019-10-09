@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Shelter.Shared
 {
-	class Animals
+	public class Animals
 	{
         // Dit is een lege constructor die de base is bij cat, dog, rabbit
 		public Animals()

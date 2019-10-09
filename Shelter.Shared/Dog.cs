@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Shelter.Shared
 {
-	class Dog : Animals
+	public class Dog : Animals
 	{
 		public Dog() : base()
 		{

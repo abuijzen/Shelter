@@ -1,52 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.0": {
-      "Shelter.Mvc/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.0",
-        "compile": {
-          "bin/placeholder/Shelter.Mvc.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Shelter.Mvc.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      }
-    }
+    ".NETCoreApp,Version=v3.0": {}
   },
-  "libraries": {
-    "Shelter.Mvc/1.0.0": {
-      "type": "project",
-      "path": "../Shelter.Mvc/Shelter.Mvc.csproj",
-      "msbuildProject": "../Shelter.Mvc/Shelter.Mvc.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.0": [
-      "Shelter.Mvc >= 1.0.0"
-    ]
+    ".NETCoreApp,Version=v3.0": []
   },
   "packageFolders": {
-    "/Users/angeliquebuijzen/.nuget/packages/": {},
+    "/Users/ElkeBorreij/.nuget/packages/": {},
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/angeliquebuijzen/Documents/SCHOOL/ASP.NET/groepswerk/Shelter/Shelter/Shelter.Shared/Shelter.Shared.csproj",
+      "projectUniqueName": "/Users/ElkeBorreij/Documents/GitHub/Shelter/Shelter.Shared/Shelter.Shared.csproj",
       "projectName": "Shelter.Shared",
-      "projectPath": "/Users/angeliquebuijzen/Documents/SCHOOL/ASP.NET/groepswerk/Shelter/Shelter/Shelter.Shared/Shelter.Shared.csproj",
-      "packagesPath": "/Users/angeliquebuijzen/.nuget/packages/",
-      "outputPath": "/Users/angeliquebuijzen/Documents/SCHOOL/ASP.NET/groepswerk/Shelter/Shelter/Shelter.Shared/obj/",
+      "projectPath": "/Users/ElkeBorreij/Documents/GitHub/Shelter/Shelter.Shared/Shelter.Shared.csproj",
+      "packagesPath": "/Users/ElkeBorreij/.nuget/packages/",
+      "outputPath": "/Users/ElkeBorreij/Documents/GitHub/Shelter/Shelter.Shared/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/angeliquebuijzen/.nuget/NuGet/NuGet.Config"
+        "/Users/ElkeBorreij/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
@@ -56,11 +34,7 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "projectReferences": {
-            "/Users/angeliquebuijzen/Documents/SCHOOL/ASP.NET/groepswerk/Shelter/Shelter/Shelter.Mvc/Shelter.Mvc.csproj": {
-              "projectPath": "/Users/angeliquebuijzen/Documents/SCHOOL/ASP.NET/groepswerk/Shelter/Shelter/Shelter.Mvc/Shelter.Mvc.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
