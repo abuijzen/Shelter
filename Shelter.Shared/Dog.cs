@@ -20,7 +20,7 @@ namespace Shelter.Shared
                             string speciesFriendly,
                             DateTime since,
                             string bio,
-                            string alergies,
+                            string allergies,
 							bool barker) /*extra toegevoegde data */
 					
 					: base(	id,
@@ -33,7 +33,7 @@ namespace Shelter.Shared
 							speciesFriendly,
 							since,
 							bio,
-							alergies)
+							allergies)
 		{
 
 		}

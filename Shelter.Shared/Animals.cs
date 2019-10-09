@@ -12,25 +12,26 @@ namespace Shelter.Shared
                             string race,
                             DateTime dateOfBirth,
                             bool isFertile,
-                            string kidFriendly,
-                            string animalFriendly,
-                            string speciesFriendly,
+                            bool isKidFriendly,
+                            bool isAnimalFriendly,
+                            bool isSpeciesFriendly,
                             DateTime since,
                             string bio,
-                            string alergies)
+                            string allergies)
                         {
                 Id=id;
                 Name=name;
                 Race =race;
                 DateOfBirth=dateOfBirth;
                 IsFertile= isFertile;
-                KidFriendly=kidFriendly;
-                AnimalFriendly=animalFriendly;
-                SpeciesFriendly=speciesFriendly;
+                IsKidFriendly=isKidFriendly;
+                IsAnimalFriendly=isAnimalFriendly;
+                IsSpeciesFriendly=isSpeciesFriendly;
                 Since=since;
                 Bio=bio;
-                Alergies=alergies;
+                Allergies=allergies;
 
+                
 
 
             }
@@ -39,14 +40,14 @@ namespace Shelter.Shared
             public string Race { get; set; }
             public DateTime DateOfBirth { get; set; }
             public bool IsFertile { get; set; }
-            public string KidFriendly { get; set; }
-            public string AnimalFriendly { get; set; }
-            public string SpeciesFriendly { get; set; }
+            public bool IsKidFriendly { get; set; }
+            public bool IsAnimalFriendly { get; set; }
+            public bool IsSpeciesFriendly { get; set; }
             public DateTime Since { get; set; }
 
             public string Bio { get; set; }
 
-            public string Alergies { get; set; }
+            public string Allergies { get; set; }
 
 
         }

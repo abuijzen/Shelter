@@ -15,26 +15,25 @@ namespace Shelter.Shared
                             string race,
                             DateTime dateOfBirth,
                             bool isFertile,
-                            string kidFriendly,
-                            string animalFriendly,
-                            string speciesFriendly,
+                            bool isKidFriendly,
+                            bool isAnimalFriendly,
+                            bool isSpeciesFriendly,
                             DateTime since,
                             string bio,
-                            string alergies,
+                            string allergies,
 							string size) /*extra toegevoegde data */
-			: base(	id,
-							name,
+			: base(	id,name,
 							race,
 							dateOfBirth,
 							isFertile,
-							kidFriendly,
-							animalFriendly,
-							speciesFriendly,
+							isKidFriendly,
+							isAnimalFriendly,
+							isSpeciesFriendly,
 							since,
 							bio,
-							alergies){
+							allergies){
 
 		}
-
+public string size { get; set; }
 	}
 }
