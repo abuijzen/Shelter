@@ -5,6 +5,7 @@ namespace Shelter.Shared
 {
 	class Animals
 	{
+        // Dit is een lege constructor die de base is bij cat, dog, rabbit
 		public Animals()
 		{
 
