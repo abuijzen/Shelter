@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Shelter.Mvc.Models;
+using Shelter.Shared;
 
 namespace Shelter.Mvc.Controllers
 {
