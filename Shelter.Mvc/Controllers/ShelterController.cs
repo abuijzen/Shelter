@@ -11,13 +11,16 @@ namespace Shelter.Mvc.Controllers
 {
     public class ShelterController : Controller
     {
-  public IActionResult Index()
-{
- 
-   return View();
-}
+        private readonly ILogger<ShelterController> _logger;
+
+        public ShelterController(ILogger<ShelterController> logger)
+        {
+            _logger = logger;
+        }
+
+        public IActionResult Index()
+        {
+            return View(new AnimalViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
     }
-
-
-  
 }
