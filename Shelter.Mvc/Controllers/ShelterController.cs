@@ -20,8 +20,10 @@ namespace Shelter.Mvc.Controllers
 
         public IActionResult Index()
         {
+            // opbouwen van het view model en in het view model steken
             var cat1 = new Cat(1, "Felix", "Britse Korthaar", new DateTime(2005, 10, 09), false, true, true, true, new DateTime(2007, 10, 09), "meow I'm a cat", "catnip", true);
-            return View(new AnimalViewModel {  });
+            var rabbit1 =new Rabbit(2, "Ior", "Hollander", new DateTime(2017, 12, 25), false, true, true, true, new DateTime(2018, 09, 10), "Ior is een cutiepie", "nothing", "small");
+            return View(new AnimalViewModel {  Animals = new List<Animal> { cat1, rabbit1}  });
         }
     }
 }

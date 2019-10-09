@@ -6,10 +6,7 @@ namespace Shelter.Mvc.Models
 {
     public class AnimalViewModel
     {
-        public List<Cat> Cat();
-        public List<Dog> Dog();
-        public List<Rabbit> Rabbit();
 
-        public List<Animal> Animals();
+        public List<Animal> Animals { get; set;}
     }
 }
