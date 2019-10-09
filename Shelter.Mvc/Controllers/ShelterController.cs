@@ -11,6 +11,13 @@ namespace Shelter.Mvc.Controllers
 {
     public class ShelterController : Controller
     {
-
+  public IActionResult Index()
+{
+ 
+   return View();
+}
     }
+
+
+  
 }

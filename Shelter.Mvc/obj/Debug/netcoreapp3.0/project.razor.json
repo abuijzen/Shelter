@@ -1,5 +1,5 @@
 {
-  "FilePath": "/Users/angeliquebuijzen/Documents/SCHOOL/ASP.NET/groepswerk/Shelter/Shelter.Mvc/Shelter.Mvc.csproj",
+  "FilePath": "/Users/angeliquebuijzen/Documents/SCHOOL/ASP.NET/groepswerk/Shelter/Shelter/Shelter.Mvc/Shelter.Mvc.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14343,6 +14343,16 @@
   },
   "RootNamespace": "Shelter.Mvc",
   "Documents": [
+    {
+      "FilePath": "Views/Home/shelter.cshtml",
+      "TargetPath": "Views/Home/shelter.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Shelter/index.cshtml",
+      "TargetPath": "Views/Shelter/index.cshtml",
+      "FileKind": "mvc"
+    },
     {
       "FilePath": "Views/Home/Privacy.cshtml",
       "TargetPath": "Views/Home/Privacy.cshtml",
