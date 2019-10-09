@@ -5,10 +5,10 @@ namespace Shelter.Shared
 {
 	class Cat : Animals
 	{
-		/*public Cat() : base()
+		public Cat() : base()
 		{
 
-		}*/
+		}
 
 		public Cat(int id,
 							string name,

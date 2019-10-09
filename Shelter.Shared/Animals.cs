@@ -5,6 +5,10 @@ namespace Shelter.Shared
 {
 	class Animals
 	{
+		public Animals()
+		{
+
+		}
 
 		public Animals(int id,
 						string name,
@@ -17,20 +21,20 @@ namespace Shelter.Shared
 							DateTime since,
 							string bio,
 							string allergies)
-			{
-				Id = id;
-				Name = name;
-				Race = race;
-				DateOfBirth = dateOfBirth;
-				IsFertile = isFertile;
-				IsKidFriendly = isKidFriendly;
-				IsAnimalFriendly = isAnimalFriendly;
-				IsSpeciesFriendly = isSpeciesFriendly;
-				Since = since;
-				Bio = bio;
-				Allergies = allergies;
+		{
+			Id = id;
+			Name = name;
+			Race = race;
+			DateOfBirth = dateOfBirth;
+			IsFertile = isFertile;
+			IsKidFriendly = isKidFriendly;
+			IsAnimalFriendly = isAnimalFriendly;
+			IsSpeciesFriendly = isSpeciesFriendly;
+			Since = since;
+			Bio = bio;
+			Allergies = allergies;
 		}
-        
+
 		public int Id { get; set; }
 		public string Name { get; set; }
 		public string Race { get; set; }
