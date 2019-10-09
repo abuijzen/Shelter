@@ -38,7 +38,7 @@ namespace Shelter.Shared
             public int Id { get; set; }
             public string Name { get; set; }
             public string Race { get; set; }
-            public DateTime DateOfBirth { get; set; }
+            public DateTime DateOfBirth { get; set; } 
             public bool IsFertile { get; set; }
             public bool IsKidFriendly { get; set; }
             public bool IsAnimalFriendly { get; set; }
