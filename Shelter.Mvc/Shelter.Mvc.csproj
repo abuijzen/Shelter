@@ -1,12 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <ItemGroup>
-    <ProjectReference Include="..\Shelter.Shared\Shelter.Shared.csproj" />
-  </ItemGroup>
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shelter.Shared\Shelter.Shared.csproj" />
+  </ItemGroup>
 
 
   <ItemGroup>
