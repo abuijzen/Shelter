@@ -32,9 +32,9 @@ namespace Shelter.Mvc.Models
 				};
 
 				//_beerTypes = new[] { darkSpecial, tripel, amberSpecial
+				_shelter = shelter;
+				_isInitialized = true;
 			};
-			_shelter = shelter;
-			_isInitialized = true;
 		}
 
 		public static Shared.Shelter Shelter
