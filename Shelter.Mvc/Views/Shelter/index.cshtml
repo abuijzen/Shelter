@@ -4,8 +4,9 @@
 @using Shelter.Mvc.Models
 @model Shelter.Mvc.Models.AnimalViewModel
 
-
 @foreach (var item in Model.Animals)
 {
-  <p> Name: @item.Name </p>
+	<a href="./@item.Id"> Name: @item.Name </a>
+	<a asp-controller="Beer" asp-action="Detail" asp-route-id=@item.Id>Detail</a>
+	<a asp-controller="Shelter" asp-action="Delete" asp-route-id=@item.Id>Delete</a>
 }

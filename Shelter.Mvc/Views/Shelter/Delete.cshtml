@@ -1,1 +1,13 @@
-// Deleten van het dier
+@using System;
+@using Shelter.Shared;
+@using System.Collections.Generic;
+@using Shelter.Mvc.Models;
+@model Shelter.Mvc.Models.AnimalViewModel;
+
+<p>
+Are you sure you want to delete?
+</p>
+
+<form method="post" asp-controller="Shelter" asp-action="Delete">
+	<input type="submit" value="delete" asp-for-id="1">
+</form>
