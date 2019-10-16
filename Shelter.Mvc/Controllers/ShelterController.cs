@@ -31,14 +31,14 @@ namespace Shelter.Mvc.Controllers
 			return View(new AnimalViewModel { Animals = new List<Animal> { cat1, rabbit1, cat2 } });
 		}
 
-		public IActionResult Delete(int id)
+		/*public IActionResult Delete(int id)
 		{
 			var currentAnimal = ShelterController.Shelter.Animals.FirstOrDefault(x => x.Id == id);
-			if (currentAnimal == default(Beer))
+			if (currentAnimal == default(Animal))
 			{
 				return NotFound();
 			}
 			return View(currentAnimal);
-		}
+		}*/
 	}
 }
