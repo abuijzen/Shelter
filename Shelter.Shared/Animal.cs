@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Shelter.Shared
 {
-	public class Animals
+	public class Animal
 	{
         // Dit is een lege constructor die de base is bij cat, dog, rabbit
-		public Animals()
+		public Animal()
 		{
 
 		}
 
-		public Animals(int id,
+		public Animal(int id,
 						string name,
 							string race,
 							DateTime dateOfBirth,
