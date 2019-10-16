@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Shelter.Mvc.Models;
 
+
 namespace Shelter.Mvc.Controllers
 {
     public class HomeController : Controller
