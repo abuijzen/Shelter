@@ -11,20 +11,19 @@
 	<label asp-for="Race">Type: </label><br>
 	<input type="text" placeholder="@Model.Race" name="Race"><br>
 	<label asp-for="DateOfBirth">Date of Birth: </label><br>
-	<input type="text" placeholder="@Model.DateOfBirth" name="DateOfBirth"><br>
+	<input type="text" placeholder="@Model.DateOfBirth" name="DateOfBirth" disabled><br>
 	<label asp-for="IsFertile">Fertile: </label><br>
-	<input type="text" placeholder="@Model.IsFertile" name="IsFertile"><br>
-
+	<input type="text" placeholder="@Model.IsFertile" name="IsFertile" disabled><br>
 	<label asp-for="IsKidFriendly">Kid Friendly: </label><br>
-	<input type="text" placeholder="@Model.IsKidFriendly" name="IsKidFriendly"><br>
+	<input type="text" placeholder="@Model.IsKidFriendly" name="IsKidFriendly" disabled><br>
 	<label asp-for="IsAnimalFriendly">Animal Friendly: </label><br>
-	<input type="text" placeholder="@Model.IsAnimalFriendly" name="IsAnimalFriendly"><br>
+	<input type="text" placeholder="@Model.IsAnimalFriendly" name="IsAnimalFriendly" disabled><br>
 	<label asp-for="Since">At shelter since: </label><br>
-	<input type="text" placeholder="@Model.Since" name="Since"><br>
+	<input type="text" placeholder="@Model.Since" name="Since" disabled><br>
 	<label asp-for="Bio">Intro: </label><br>
-	<input type="text" placeholder="@Model.Bio" name="Bio"><br>
+	<input type="text" placeholder="@Model.Bio" name="Bio" disabled><br>
 	<label asp-for="Allergies">Allergies: </label><br>
-	<input type="text" placeholder="@Model.Allergies" name="Allergies"><br>
+	<input type="text" placeholder="@Model.Allergies" name="Allergies" disabled><br>
 	<input asp-for="Id" type="hidden">
 	<input type="submit" value="Update"><br>
 </form>
