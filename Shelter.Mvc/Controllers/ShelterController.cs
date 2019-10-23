@@ -26,6 +26,16 @@ namespace Shelter.Mvc.Controllers
 			return View(AnimalViewModel.Shelter);
 		}
 
+		public IActionResult Detail(int id)
+		{
+			var currentAnimal = AnimalViewModel.Shelter.Animals.FirstOrDefault(x => x.Id == id);
+			if (currentAnimal == default(Animal))
+			{
+				return NotFound();
+			}
+			return View(currentAnimal);
+		}
+
 		public IActionResult Delete(int id)
 		{
 			var currentAnimal = AnimalViewModel.Shelter.Animals.FirstOrDefault(x => x.Id == id);

@@ -4,9 +4,9 @@
 @using Shelter.Mvc.Models;
 
 <p>
-Are you sure you want to delete?
+Are you sure you want to delete? <em>@Model.Name</em>
 </p>
 
-<form method="post" asp-controller="Shelter" asp-action="Delete">
-	<input type="submit" value="delete" asp-for-id="1">
+<form method="post" asp-controller="Shelter" asp-action="DoDelete">
+	<input type="submit" value="Delete">
 </form>

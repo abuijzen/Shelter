@@ -1,1 +1,10 @@
-// detail pagina van het dier 
+@model Shelter.Shared.Animal;
+
+@{
+      ViewData["Title"] = Model.Name;
+}
+
+<div>
+	<p>Name: @Model.Name</p>
+	<p>Type: @Model.Race</p>
+</div>
