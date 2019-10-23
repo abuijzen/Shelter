@@ -19,9 +19,6 @@ namespace Shelter.Mvc.Models
 		{
 			if (!_isInitialized)
 			{
-				//var darkSpecial = new BeerType { Name = "Donker Speciaalbier" };
-				//var tripel = new BeerType { Name = "Tripel" };
-				//var amberSpecial = new BeerType { Name = "Amber speciaalbier" };
 				var shelter = new Shelter.Shared.Shelter()
 				{
 					Animals = new List<Animal> {
@@ -31,7 +28,6 @@ namespace Shelter.Mvc.Models
 					}
 				};
 
-				//_beerTypes = new[] { darkSpecial, tripel, amberSpecial
 				_shelter = shelter;
 				_isInitialized = true;
 			};
