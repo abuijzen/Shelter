@@ -4,11 +4,27 @@
       ViewData["Title"] = Model.Name;
 }
 
+
 <form method="post" asp-controller="Shelter" asp-action="DoUpdate">
 	<label asp-for="Name">Name:</label><br>
 	<input type="text" placeholder="@Model.Name" name="Name"><br>
 	<label asp-for="Race">Type: </label><br>
 	<input type="text" placeholder="@Model.Race" name="Race"><br>
+	<label asp-for="DateOfBirth">Date of Birth: </label><br>
+	<input type="text" placeholder="@Model.DateOfBirth" name="DateOfBirth"><br>
+	<label asp-for="IsFertile">Fertile: </label><br>
+	<input type="text" placeholder="@Model.IsFertile" name="IsFertile"><br>
+
+	<label asp-for="IsKidFriendly">Kid Friendly: </label><br>
+	<input type="text" placeholder="@Model.IsKidFriendly" name="IsKidFriendly"><br>
+	<label asp-for="IsAnimalFriendly">Animal Friendly: </label><br>
+	<input type="text" placeholder="@Model.IsAnimalFriendly" name="IsAnimalFriendly"><br>
+	<label asp-for="Since">At shelter since: </label><br>
+	<input type="text" placeholder="@Model.Since" name="Since"><br>
+	<label asp-for="Bio">Intro: </label><br>
+	<input type="text" placeholder="@Model.Bio" name="Bio"><br>
+	<label asp-for="Allergies">Allergies: </label><br>
+	<input type="text" placeholder="@Model.Allergies" name="Allergies"><br>
 	<input asp-for="Id" type="hidden">
 	<input type="submit" value="Update"><br>
 </form>
