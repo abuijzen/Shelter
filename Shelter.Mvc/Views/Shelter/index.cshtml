@@ -5,7 +5,8 @@
 
 @foreach (var item in Model.Animals)
 {
-	<a href="./@item.Id"> Name: @item.Name </a>
-	<a asp-controller="Shelter" asp-action="Detail" asp-route-id=@item.Id>Detail</a>
+	
+	<a asp-controller="Shelter" asp-action="Detail" asp-route-id=@item.Id>@item.Name</a>
 	<a asp-controller="Shelter" asp-action="Delete" asp-route-id=@item.Id>Delete</a>
+	<br><br>
 }
