@@ -1,9 +1,12 @@
-@using System;
-@using Shelter.Shared;
-@using System.Collections.Generic;
-@using Shelter.Mvc.Models;
+@model Shelter.Shared.Animal;
+
+@{
+      ViewData["Title"] = Model.Name;
+}
+
+<p>Are you sure you want to delete? <em>@Model.Name</em></p>
 
 <form method="post" asp-controller="Shelter" asp-action="DoDelete">
-	
+	<input asp-for="Id" type="hidden"><br>
 	<input type="submit" value="Delete">
 </form>
