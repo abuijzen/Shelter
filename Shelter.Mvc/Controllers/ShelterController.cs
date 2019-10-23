@@ -26,14 +26,27 @@ namespace Shelter.Mvc.Controllers
 			return View(AnimalViewModel.Shelter);
 		}
 
-		/*public IActionResult Delete(int id)
+		public IActionResult Delete(int id)
 		{
-			var currentAnimal = ShelterController.Shelter.Animals.FirstOrDefault(x => x.Id == id);
+			var currentAnimal = AnimalViewModel.Shelter.Animals.FirstOrDefault(x => x.Id == id);
 			if (currentAnimal == default(Animal))
 			{
 				return NotFound();
 			}
 			return View(currentAnimal);
-		}*/
+		}
+
+		[HttpPost]
+		public IActionResult DoDelete(int id)
+		{
+			var currentAnimal = AnimalViewModel.Shelter.Animals.FirstOrDefault(x => x.Id == id);
+			if (currentAnimal == default(Animal))
+			{
+				return NotFound();
+			}
+			AnimalViewModel.Shelter.Animals.Remove(currentAnimal);
+			return RedirectToAction(nameof(Index));
+
+		}
 	}
 }
