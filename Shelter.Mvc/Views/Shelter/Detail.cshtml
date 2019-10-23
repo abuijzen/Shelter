@@ -4,7 +4,11 @@
       ViewData["Title"] = Model.Name;
 }
 
-<div>
-	<p>Name: @Model.Name</p>
-	<p>Type: @Model.Race</p>
-</div>
+<form method="post" asp-controller="Shelter" asp-action="DoUpdate">
+	<label asp-for="Name">Name:</label><br>
+	<input type="text" placeholder="@Model.Name" name="Name"><br>
+	<label asp-for="Race">Type: </label><br>
+	<input type="text" placeholder="@Model.Race" name="Race"><br>
+	<input asp-for="Id" type="hidden">
+	<input type="submit" value="Update"><br>
+</form>
