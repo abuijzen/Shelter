@@ -7,7 +7,8 @@ namespace Shelter.Shared
 
 		}
 
-		public Caretaker(string firstName, string lastName) : base(firstName, lastName)
+		public Caretaker(string firstName,
+						string lastName) : base(firstName, lastName)
 		{
 
 		}
