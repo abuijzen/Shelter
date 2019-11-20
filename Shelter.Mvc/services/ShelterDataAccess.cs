@@ -9,9 +9,9 @@ namespace Shelter.MVC
   {
     IEnumerable<Shared.Shelter> GetAllShelters();
     IEnumerable<Shared.Shelter> GetAllSheltersFull();
-    Shared.Shelter GetSheltersById(int id);
+    Shared.Shelter GetShelterById(int id);
 
-    IEnumerable<Animal> GetAnimals(int animalId);
+    IEnumerable<Animal> GetAnimals(int shelterId);
     Animal GetAnimalByShelterAndId(int shelterId, int animalId);
   }
 
@@ -24,14 +24,14 @@ namespace Shelter.MVC
       _context = context;
     }
 
-    public IEnumerable<Shared.Shelter> GetAllShelter()
+    public IEnumerable<Shared.Shelter> GetAllShelters()
     {
       return _context.Shelters;
     }
 
-    public IEnumerable<Shared.Shelter> GetAllShelterFull()
+    public IEnumerable<Shared.Shelter> GetAllSheltersFull()
     {
-      return _context.Shelter
+      return _context.Shelters
         .Include(shelter => shelter.Animals).ThenInclude(animal => animal.AnimalType)
         .Include(shelter => shelter.Owner);
     }
