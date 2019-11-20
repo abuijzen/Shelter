@@ -13,24 +13,25 @@ using Microsoft.AspNetCore.Mvc;
 namespace Shelter.Mvc.Controllers
 {
 
-[ApiController]
-[Route("[controller]")]
-    public class ApiController : ControllerBase
-    {
-        [HttpGet]
-         /* Alle dieren van ons 1ne asiel zijn hier te vinden, maar dit zou een lijst moeten worden van alle namen +ids van de asielen*/
+	[ApiController]
+	[Route("[controller]")]
+	public class ApiController : ControllerBase
+	{
+		[HttpGet]
+		/* Alle dieren van ons 1ne asiel zijn hier te vinden, maar dit zou een lijst moeten worden van alle namen +ids van de asielen*/
 
-        public ActionResult<Shelter.Shared.Shelter> Index() {
-            return AnimalViewModel.Shelter;
-             }
+		public ActionResult<Shelter.Shared.Shelter> Index()
+		{
+			return AnimalViewModel.Shelter;
+		}
 
-        [HttpGet("{id}")]
-       /* Hier is het de bedoeling dat je de lijst van dieren die in 1 asiel zitten krijgt*/
+		[HttpGet("{id}")]
+		/* Hier is het de bedoeling dat je de lijst van dieren die in 1 asiel zitten krijgt*/
 
-       public ActionResult<List<Shelter.Shared.Animal>> GetById(int id)
-        {
-           return AnimalViewModel.Shelter.Animals;
-        }
+		public ActionResult<List<Shelter.Shared.Animal>> GetById(int id)
+		{
+			return AnimalViewModel.Shelter.Animals;
+		}
 
        [HttpGet("{id}/animals")]
         public IActionResult GetShelterAnimals(int id)
@@ -41,5 +42,5 @@ namespace Shelter.Mvc.Controllers
         }
 
 
-    }
+	}
 }
