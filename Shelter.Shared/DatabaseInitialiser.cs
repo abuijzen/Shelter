@@ -11,7 +11,7 @@ namespace Shelter.Shared
 
   public class DatabaseInitializer : IDatabaseInitializer
   {
-    private BreweryContext _context;
+    private ShelterContext _context;
     private ILogger<DatabaseInitializer> _logger;
     public DatabaseInitializer(ShelterContext context, ILogger<DatabaseInitializer> logger)
     {
