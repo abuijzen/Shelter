@@ -33,7 +33,21 @@ namespace Shelter.Mvc.Controllers
 			return AnimalViewModel.Shelter.Animals;
 		}
 
-      
+        /* Alle Dieren binnen een Shelter */
+        [Route("{id}/animals")]
+        public IActionResult GetShelterAnimals(int id)
+        {
+            var animals = _dataAccess.GetAnimals(id);
+            return animals == default(IEnumerable<Animal>) ? (IActionResult)NotFound() : Ok(animals);
+        }
+        
+        /* Het dier van een bepaalde shelter zijn info*/
 
+        [HttpGet("{shelterId}/animals/{animalId}")]
+        public IActionResult GetAnimalDetails(int shelterId, int animalId)
+        {
+            var animal = _dataAccess.GetAnimalByShelterAndId(shelterId, animalId);
+            return animal == default(Shared.Animal) ? (IActionResult)NotFound() : Ok(animal);
+         }
 	}
 }
