@@ -9,14 +9,23 @@ using System.Linq;
 using System.Net.Mime;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Shelter.Mvc.Controllers
 {
-
 	[ApiController]
 	[Route("[controller]")]
 	public class ApiController : ControllerBase
 	{
+		private readonly IShelterDataAccess _dataAccess;
+		private readonly ILogger<ApiController> _logger;
+
+		public ApiController(ILogger<ApiController> logger, IShelterDataAccess dataAccess)
+		{
+			_dataAccess = dataAccess;
+			_logger = logger;
+		}
+
 		[HttpGet]
 		/* Alle dieren van ons 1ne asiel zijn hier te vinden, maar dit zou een lijst moeten worden van alle namen +ids van de asielen*/
 
