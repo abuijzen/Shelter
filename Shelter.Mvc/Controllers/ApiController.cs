@@ -32,6 +32,14 @@ namespace Shelter.Mvc.Controllers
            return AnimalViewModel.Shelter.Animals;
         }
 
+       [HttpGet("{id}/animals")]
+        public IActionResult GetShelterAnimals(int id)
+        {
+      /* Hier is het de bedoeling dat je de lijst van dieren die in 1 asiel zitten krijgt*/
+        var animals = _dataAccess.GetAnimals(id);
+        return animals == default(IEnumerable<Animal>) ? (IActionResult)NotFound() : Ok(animals);
+        }
+
 
     }
 }
