@@ -25,6 +25,19 @@ namespace Shelter.Mvc.Controllers
 			return AnimalViewModel.Shelter;
 		}
 
+		[HttpGet("/")]
+		public IActionResult GetAllShelters()
+		{
+			return Ok(_dataAccess.GetAllShelters());
+		}
+
+		[HttpGet("full")]
+		public IActionResult GetAllSheltersFull()
+		{
+			// You return a list here, "not found" is not an issue -- an empty list is still a valid list.
+			return Ok(_dataAccess.GetAllSheltersFull());
+		}
+
 		[HttpGet("{id}")]
 		/* Hier is het de bedoeling dat je de lijst van dieren die in 1 asiel zitten krijgt*/
 
@@ -32,8 +45,5 @@ namespace Shelter.Mvc.Controllers
 		{
 			return AnimalViewModel.Shelter.Animals;
 		}
-
-      
-
 	}
 }
