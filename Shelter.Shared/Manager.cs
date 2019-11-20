@@ -1,6 +1,6 @@
 namespace Shelter.Shared
 {
-	class Manager : Employees
+	public class Manager : Employees
 	{
 		public Manager()
 		{

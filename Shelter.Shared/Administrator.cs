@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Shelter.Shared
 {
-	class Administrator : Employees
+	public class Administrator : Employees
 	{
 		public Administrator()
 		{

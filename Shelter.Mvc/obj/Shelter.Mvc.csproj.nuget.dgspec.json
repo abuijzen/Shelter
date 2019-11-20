@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\haege\\Dropbox\\thomas_more\\3IMD_A\\asp_net\\projecten\\Shelter\\Shelter.Mvc\\Shelter.Mvc.csproj": {}
+    "/Users/ElkeBorreij/Documents/GitHub/Shelter/Shelter.Mvc/Shelter.Mvc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\haege\\Dropbox\\thomas_more\\3IMD_A\\asp_net\\projecten\\Shelter\\Shelter.Mvc\\Shelter.Mvc.csproj": {
+    "/Users/ElkeBorreij/Documents/GitHub/Shelter/Shelter.Mvc/Shelter.Mvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\haege\\Dropbox\\thomas_more\\3IMD_A\\asp_net\\projecten\\Shelter\\Shelter.Mvc\\Shelter.Mvc.csproj",
+        "projectUniqueName": "/Users/ElkeBorreij/Documents/GitHub/Shelter/Shelter.Mvc/Shelter.Mvc.csproj",
         "projectName": "Shelter.Mvc",
-        "projectPath": "C:\\Users\\haege\\Dropbox\\thomas_more\\3IMD_A\\asp_net\\projecten\\Shelter\\Shelter.Mvc\\Shelter.Mvc.csproj",
-        "packagesPath": "C:\\Users\\haege\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\haege\\Dropbox\\thomas_more\\3IMD_A\\asp_net\\projecten\\Shelter\\Shelter.Mvc\\obj\\",
+        "projectPath": "/Users/ElkeBorreij/Documents/GitHub/Shelter/Shelter.Mvc/Shelter.Mvc.csproj",
+        "packagesPath": "/Users/ElkeBorreij/.nuget/packages/",
+        "outputPath": "/Users/ElkeBorreij/Documents/GitHub/Shelter/Shelter.Mvc/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\haege\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/ElkeBorreij/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
@@ -28,8 +28,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\haege\\Dropbox\\thomas_more\\3IMD_A\\asp_net\\projecten\\Shelter\\Shelter.Shared\\Shelter.Shared.csproj": {
-                "projectPath": "C:\\Users\\haege\\Dropbox\\thomas_more\\3IMD_A\\asp_net\\projecten\\Shelter\\Shelter.Shared\\Shelter.Shared.csproj"
+              "/Users/ElkeBorreij/Documents/GitHub/Shelter/Shelter.Shared/Shelter.Shared.csproj": {
+                "projectPath": "/Users/ElkeBorreij/Documents/GitHub/Shelter/Shelter.Shared/Shelter.Shared.csproj"
               }
             }
           }
@@ -70,24 +70,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100-rc1-014190\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100-rc1-014190/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\haege\\Dropbox\\thomas_more\\3IMD_A\\asp_net\\projecten\\Shelter\\Shelter.Shared\\Shelter.Shared.csproj": {
+    "/Users/ElkeBorreij/Documents/GitHub/Shelter/Shelter.Shared/Shelter.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\haege\\Dropbox\\thomas_more\\3IMD_A\\asp_net\\projecten\\Shelter\\Shelter.Shared\\Shelter.Shared.csproj",
+        "projectUniqueName": "/Users/ElkeBorreij/Documents/GitHub/Shelter/Shelter.Shared/Shelter.Shared.csproj",
         "projectName": "Shelter.Shared",
-        "projectPath": "C:\\Users\\haege\\Dropbox\\thomas_more\\3IMD_A\\asp_net\\projecten\\Shelter\\Shelter.Shared\\Shelter.Shared.csproj",
-        "packagesPath": "C:\\Users\\haege\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\haege\\Dropbox\\thomas_more\\3IMD_A\\asp_net\\projecten\\Shelter\\Shelter.Shared\\obj\\",
+        "projectPath": "/Users/ElkeBorreij/Documents/GitHub/Shelter/Shelter.Shared/Shelter.Shared.csproj",
+        "packagesPath": "/Users/ElkeBorreij/.nuget/packages/",
+        "outputPath": "/Users/ElkeBorreij/Documents/GitHub/Shelter/Shelter.Shared/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\haege\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/ElkeBorreij/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
@@ -123,7 +123,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100-rc1-014190\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100-rc1-014190/RuntimeIdentifierGraph.json"
         }
       }
     }
