@@ -25,6 +25,19 @@ namespace Shelter.Mvc.Controllers
 			return AnimalViewModel.Shelter;
 		}
 
+		[HttpGet("/")]
+		public IActionResult GetAllShelters()
+		{
+			return Ok(_dataAccess.GetAllShelters());
+		}
+
+		[HttpGet("full")]
+		public IActionResult GetAllSheltersFull()
+		{
+			// You return a list here, "not found" is not an issue -- an empty list is still a valid list.
+			return Ok(_dataAccess.GetAllSheltersFull());
+		}
+
 		[HttpGet("{id}")]
 		/* Hier is het de bedoeling dat je de lijst van dieren die in 1 asiel zitten krijgt*/
 
@@ -33,7 +46,21 @@ namespace Shelter.Mvc.Controllers
 			return AnimalViewModel.Shelter.Animals;
 		}
 
-      
+		/* Alle Dieren binnen een Shelter */
+		[Route("{id}/animals")]
+		public IActionResult GetShelterAnimals(int id)
+		{
+			var animals = _dataAccess.GetAnimals(id);
+			return animals == default(IEnumerable<Animal>) ? (IActionResult)NotFound() : Ok(animals);
+		}
 
+		/* Het dier van een bepaalde shelter zijn info*/
+
+		[HttpGet("{shelterId}/animals/{animalId}")]
+		public IActionResult GetAnimalDetails(int shelterId, int animalId)
+		{
+			var animal = _dataAccess.GetAnimalByShelterAndId(shelterId, animalId);
+			return animal == default(Shared.Animal) ? (IActionResult)NotFound() : Ok(animal);
+		}
 	}
 }
