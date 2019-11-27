@@ -36,11 +36,11 @@ namespace Shelter.Shared
 
 		private void AddData()
 		{
-			var managers = new Manager()
+			/*var managers = new Manager()
 			{
 				FirstName = "Johan",
 				LastName = "Janssen",
-			};
+			};*/
 
 			var shelter = new Shelter()
 			{
@@ -49,14 +49,23 @@ namespace Shelter.Shared
 				Address = "Dierenasielstraat 2",
 				TelephoneNumber = "045673456",
 				EmailAdress = "info@dierenasiel.be",
-
+			
 				Animals = new List<Animal> {
 						new Cat{Name = "Felix", Race = "Britse Korthaar", DateOfBirth = new DateTime(2005, 10, 09), IsFertile = false, IsKidFriendly = true, IsAnimalFriendly = true, IsSpeciesFriendly = true, Since = new DateTime(2007, 10, 09), Bio = "meow I'm a cat", Allergies = "catnip", Clawed = true},
 						new Cat{Name = "Picasso", Race = "Ragdoll", DateOfBirth = new DateTime(2005, 10, 09), IsFertile = false, IsKidFriendly = true, IsAnimalFriendly = true, IsSpeciesFriendly = true, Since = new DateTime(2007, 10, 09), Bio = "Mieeeuw", Allergies = "dogs", Clawed = true},
 						new Rabbit{Name = "Ior", Race="Hollander", DateOfBirth= new DateTime(2017, 12, 25), IsFertile =false, IsKidFriendly= true, IsAnimalFriendly =true, IsSpeciesFriendly=true, Since=new DateTime(2018, 09, 10), Bio="Ior is een cutiepie", Allergies="none", Size="small"},
-					}
+				},
+				Managers = new List<Manager> {
+						new Manager{FirstName = "Johan",LastName = "Janssen",},
+				},
+				Administrators = new List<Administrator> {
+						new Administrator{FirstName = "Johan",LastName = "Janssen",},
+				},
+				Caretakers = new List<Caretaker> {
+						new Caretaker{FirstName = "Johan",LastName = "Janssen",},
+				}
 			};
-			shelter.Managers.Add(managers);
+			
 			_context.Shelters.Add(shelter);
 
 			_context.SaveChanges();
