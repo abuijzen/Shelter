@@ -116,15 +116,15 @@ namespace Shelter.Shared
 						new Cat{Name = "Pom pom", Race = "Bengaalse tijgerkat", DateOfBirth = new DateTime(2007, 03, 29), IsFertile = false, IsKidFriendly = true, IsAnimalFriendly = true, IsSpeciesFriendly = true, Since = new DateTime(2010, 01, 15), Bio = "Een lieverd, begroet iedereen met een kopstootje.", Allergies = "geen", Clawed = true},
 						new Rabbit{Name = "Nijntje", Race="Kleurdwerg", DateOfBirth= new DateTime(2018, 04, 05), IsFertile =true, IsKidFriendly= true, IsAnimalFriendly =true, IsSpeciesFriendly=false, Since=new DateTime(2018, 08, 06), Bio="Nijntje, lief klein konijntje.", Allergies="wortels", Size="small"},
 						new Rabbit{Name = "Sneeuwtje", Race="Amerikaanse konijn", DateOfBirth= new DateTime(2019, 08, 01), IsFertile =false, IsKidFriendly= true, IsAnimalFriendly =true, IsSpeciesFriendly=false, Since=new DateTime(2019, 10, 30), Bio="Een witte konijn met een hoge aaibaarheidsfactor.", Allergies="rinitis", Size="small"},
-						new Dog{Name = "Mimi", Race = "Pommeriaan", DateOfBirth = new DateTime(2002, 11, 01), IsFertile = false, IsKidFriendly = true, IsAnimalFriendly = false, IsSpeciesFriendly = false, Since = new DateTime(2018, 02, 27), Bio = "Mimi is bang voor veel dingen maar overwint haar angsten voor haar baasjes.", Allergies = "geen", barker = true},
-						new Dog{Name = "Elisabeth III", Race = "Bobtail", DateOfBirth = new DateTime(2019, 10, 30), IsFertile = false, IsKidFriendly = true, IsAnimalFriendly = true, IsSpeciesFriendly = true, Since = new DateTime(2019, 11, 28), Bio = "Een jong meisje met klasse, dat is Elisabeth III", Allergies = "kip", barker = true},
+						new Dog{Name = "Mimi", Race = "Pommeriaan", DateOfBirth = new DateTime(2002, 11, 01), IsFertile = false, IsKidFriendly = true, IsAnimalFriendly = false, IsSpeciesFriendly = false, Since = new DateTime(2018, 02, 27), Bio = "Mimi is bang voor veel dingen maar overwint haar angsten voor haar baasjes.", Allergies = "geen", Barker = true},
+						new Dog{Name = "Elisabeth III", Race = "Bobtail", DateOfBirth = new DateTime(2019, 10, 30), IsFertile = false, IsKidFriendly = true, IsAnimalFriendly = true, IsSpeciesFriendly = true, Since = new DateTime(2019, 11, 28), Bio = "Een jong meisje met klasse, dat is Elisabeth III", Allergies = "kip", Barker = true},
 				},
 				Managers = new List<Manager> {
 						new Manager{FirstName = "Lodewijk",LastName = "Vander Boshen",},
 						new Manager{FirstName = "Emiel",LastName = "Waeters",},
 				},
 				Administrators = new List<Administrator> {
-						new Administrator{FirstName = "Els",LastName = "Aarendel",},
+						new Administrator{FirstName = "Els",LastName = "Van Aarendelle",},
 						new Administrator{FirstName = "Anna",LastName = "Christofson",},
 						new Administrator{FirstName = "Paul",LastName = "D'haeg",},
 				},
