@@ -36,12 +36,6 @@ namespace Shelter.Shared
 
 		private void AddData()
 		{
-			/*var managers = new Manager()
-			{
-				FirstName = "Johan",
-				LastName = "Janssen",
-			};*/
-
 			var shelter1 = new Shelter()
 			{
 				Name = "Canina",
@@ -75,8 +69,39 @@ namespace Shelter.Shared
 						new Caretaker{FirstName = "Daniel",LastName = "Verstappen",},
 				}
 			};
+
+			var shelter2 = new Shelter()
+			{
+				Name = "Veeweyde vzw",
+				ImageUrl = "image",
+				Address = "Toekomststraat 4",
+				TelephoneNumber = "014658626",
+				EmailAdress = "veeweyde.weelde@skynet.be",
 			
-			_context.Shelters.Add(shelter1);
+				Animals = new List<Animal> {
+						new Cat{Name = "Ludo", Race = "Europeese korthaar", DateOfBirth = new DateTime(2015, 12, 10), IsFertile = false, IsKidFriendly = true, IsAnimalFriendly = false, IsSpeciesFriendly = false, Since = new DateTime(2018, 02, 21), Bio = "Ludo is een lievertje maar niet voor andere dieren.", Allergies = "geen", Clawed = true},
+						new Dog{Name = "Puk", Race = "Franse Bulldog", DateOfBirth = new DateTime(2018, 09, 19), IsFertile = false, IsKidFriendly = true, IsAnimalFriendly = true, IsSpeciesFriendly = true, Since = new DateTime(2019, 05, 20), Bio = "Puk is een echte ronkende franse buldog, door gezondheidsproblemen is hij bij ons beland", Allergies = "Kip", Barker = true},
+						new Cat{Name = "Moesti", Race = "Europeese korthaar", DateOfBirth = new DateTime(2014, 03, 02), IsFertile = false, IsKidFriendly = false, IsAnimalFriendly = true, IsSpeciesFriendly =true, Since = new DateTime(2016, 07, 17), Bio = "Moesti is een echte dierenvriend van kleine kinderen houden ze niet", Allergies = "geen", Clawed = true},
+						new Dog{Name = "Marcel", Race = "Teckel", DateOfBirth = new DateTime(2009, 10, 09), IsFertile = false, IsKidFriendly = true, IsAnimalFriendly = true, IsSpeciesFriendly = true, Since = new DateTime(2019, 09, 20), Bio = "Marcel is een oude gek, op zijn oude dag heeft hij nog veel liefde voor tennisballen", Allergies = "geen", Barker = false},
+						new Rabbit{Name = "Olaf", Race="Rijnlander", DateOfBirth= new DateTime(2017, 10, 15), IsFertile =false, IsKidFriendly= true, IsAnimalFriendly =true, IsSpeciesFriendly=true, Since=new DateTime(2018, 10, 17), Bio="Olaf is een vinnig beestje, perfect voor jonge gezinnen", Allergies="geen", Size="groot"},
+						new Rabbit{Name = "Garret", Race="Franse Hangoor", DateOfBirth= new DateTime(2015, 08, 20), IsFertile =false, IsKidFriendly= true, IsAnimalFriendly =false, IsSpeciesFriendly=false, Since=new DateTime(2019, 10, 11), Bio="Garret houd van kinderen en mensen, van andere dieren gaat hij lopen.", Allergies="geen", Size="groot"},
+						new Dog{Name = "Astrix", Race = "Mastino Napoletano", DateOfBirth = new DateTime(2017, 02, 12), IsFertile = false, IsKidFriendly = true, IsAnimalFriendly = false, IsSpeciesFriendly = true, Since = new DateTime(2018, 10, 22), Bio = "Astrix is een grote jongen die veel liefde geeft", Allergies = "geen", Barker = true},
+						new Dog{Name = "Rock", Race = "Staffordshire Bull Terrier", DateOfBirth = new DateTime(2016, 09, 19), IsFertile = false, IsKidFriendly = true, IsAnimalFriendly = true, IsSpeciesFriendly = true, Since = new DateTime(2017, 11, 09), Bio = "Rock is een grote dikke vriend van iedereen", Allergies = "kip", Barker = true},
+				},
+				Managers = new List<Manager> {
+						new Manager{FirstName = "Marie",LastName = "Veeweyde",},
+				},
+				Administrators = new List<Administrator> {
+						new Administrator{FirstName = "Karel",LastName = "Hoefkens",},
+						new Administrator{FirstName = "Lies",LastName = "Ravens",},
+				},
+				Caretakers = new List<Caretaker> {
+						new Caretaker{FirstName = "Nina",LastName = "Meas",},
+						new Caretaker{FirstName = "Jonas",LastName = "Donnas",},
+						new Caretaker{FirstName = "Koen",LastName = "Rogge",},
+				}
+			};
+		
 
 			var shelter3 = new Shelter()
 			{
@@ -111,6 +136,7 @@ namespace Shelter.Shared
 			};
 
 			_context.Shelters.Add(shelter1);
+			_context.Shelters.Add(shelter2);
 			_context.Shelters.Add(shelter3);
 
 			_context.SaveChanges();
