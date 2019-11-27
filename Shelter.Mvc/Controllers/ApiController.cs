@@ -56,7 +56,7 @@ namespace Shelter.Mvc.Controllers
 		}
 
 		/* Alle Dieren binnen een Shelter */
-		[Route("{id}/animals")]
+		[HttpGet("{id}/animals")]
 		public IActionResult GetShelterAnimals(int id)
 		{
 			var animals = _dataAccess.GetAnimals(id);
