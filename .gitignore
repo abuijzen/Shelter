@@ -131,3 +131,9 @@ $RECYCLE.BIN/
 .DS_Store
 
 _NCrunch*
+
+# Database
+
+Shelter.Mvc/shelters.db
+Shelter.Mvc/shelters.db-shm
+Shelter.Mvc/shelters.db-wal

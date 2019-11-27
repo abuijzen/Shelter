@@ -36,6 +36,12 @@ namespace Shelter.Shared
 
 		private void AddData()
 		{
+			var managers = new Manager()
+			{
+				FirstName = "Johan",
+				LastName = "Janssen",
+			};
+
 			var shelter = new Shelter()
 			{
 				Name = "Dierenasiel",
@@ -44,14 +50,13 @@ namespace Shelter.Shared
 				TelephoneNumber = "045673456",
 				EmailAdress = "info@dierenasiel.be",
 
-				Managers = new List<Manager> { new Manager("Johan", "Janssen") },
-
 				Animals = new List<Animal> {
-						new Cat(1, "Felix", "Britse Korthaar", new DateTime(2005, 10, 09), false, true, true, true, new DateTime(2007, 10, 09), "meow I'm a cat", "catnip", true),
-						new Cat(2, "Picasso", "Ragdoll", new DateTime(2010, 03, 10), false, true, true, true, new DateTime(2011, 08, 10), "Mieeeuw", "dogs", true),
-						new Rabbit(3, "Ior", "Hollander", new DateTime(2017, 12, 25), false, true, true, true, new DateTime(2018, 09, 10), "Ior is een cutiepie", "nothing", "small"),
+						new Cat("Felix", "Britse Korthaar", new DateTime(2005, 10, 09), false, true, true, true, new DateTime(2007, 10, 09), "meow I'm a cat", "catnip", true),
+						new Cat("Picasso", "Ragdoll", new DateTime(2010, 03, 10), false, true, true, true, new DateTime(2011, 08, 10), "Mieeeuw", "dogs", true),
+						new Rabbit("Ior", "Hollander", new DateTime(2017, 12, 25), false, true, true, true, new DateTime(2018, 09, 10), "Ior is een cutiepie", "nothing", "small"),
 					}
 			};
+			shelter.Managers.Add(managers);
 			_context.Shelters.Add(shelter);
 
 			_context.SaveChanges();
