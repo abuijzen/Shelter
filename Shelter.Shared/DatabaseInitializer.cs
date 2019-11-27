@@ -59,17 +59,24 @@ namespace Shelter.Shared
 						new Dog{Name = "Mopsie", Race="Mopshond", DateOfBirth= new DateTime(2017, 12, 25), IsFertile =false, IsKidFriendly= true, IsAnimalFriendly =true, IsSpeciesFriendly=true, Since=new DateTime(2018, 09, 10), Bio="Mopsie is een gezonde mopshond gered uit de broodfok", Allergies="Chocolade", Barker=false},
 				},
 				Managers = new List<Manager> {
-						new Manager{FirstName = "Johan",LastName = "Janssen",},
+						new Manager{FirstName = "Kristien",LastName = "Akkermans",},
+						new Manager{FirstName = "Jonas",LastName = "Vandersteen",},
+						new Manager{FirstName = "Thomas",LastName = "Van Ostaeyen",},
 				},
 				Administrators = new List<Administrator> {
-						new Administrator{FirstName = "Johan",LastName = "Janssen",},
+						new Administrator{FirstName = "Annelies",LastName = "Metsers",},
+						new Administrator{FirstName = "Mieke",LastName = "Mertens",},
 				},
 				Caretakers = new List<Caretaker> {
-						new Caretaker{FirstName = "Johan",LastName = "Janssen",},
+						new Caretaker{FirstName = "Eva",LastName = "De Winter",},
+						new Caretaker{FirstName = "Kim",LastName = "Van de Moortele",},
+						new Caretaker{FirstName = "Arne",LastName = "Bogaert",},
+						new Caretaker{FirstName = "Karel",LastName = "Gevaerts",},
+						new Caretaker{FirstName = "Daniel",LastName = "Verstappen",},
 				}
 			};
 			
-			_context.Shelters.Add(shelter);
+			_context.Shelters.Add(shelter1);
 
 			_context.SaveChanges();
 		}
