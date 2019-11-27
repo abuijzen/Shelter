@@ -75,10 +75,8 @@ namespace Shelter.Shared
 						new Caretaker{FirstName = "Daniel",LastName = "Verstappen",},
 				}
 			};
-<<<<<<< HEAD
 			
 			_context.Shelters.Add(shelter1);
-=======
 
 			var shelter3 = new Shelter()
 			{
@@ -114,7 +112,6 @@ namespace Shelter.Shared
 
 			_context.Shelters.Add(shelter1);
 			_context.Shelters.Add(shelter3);
->>>>>>> 636d6dba0867d7a0f62618318251410b51327344
 
 			_context.SaveChanges();
 		}
