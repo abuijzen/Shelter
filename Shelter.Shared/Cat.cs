@@ -5,6 +5,6 @@ namespace Shelter.Shared
 {
 	public class Cat : Animal
 	{
-		  public bool clawed { get; set; }
+		  public bool Clawed { get; set; }
 	}
 }
