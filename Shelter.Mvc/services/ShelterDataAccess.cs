@@ -3,7 +3,7 @@ using System.Linq;
 using Shelter.Shared;
 using Microsoft.EntityFrameworkCore;
 
-namespace Shelter.MVC
+namespace Shelter.Mvc
 {
 	public interface IShelterDataAccess
 	{

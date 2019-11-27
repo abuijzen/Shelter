@@ -12,7 +12,7 @@ namespace Shelter.Mvc.Models
 
 		private static bool _isInitialized = false;
 
-		private static IEnumerable<Animal> _animal = null;
+		//private static IEnumerable<Animal> _animal = null;
 		private static Shelter.Shared.Shelter _shelter = null;
 
 		private static void Initialize()

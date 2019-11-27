@@ -10,7 +10,7 @@ using System.Net.Mime;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Shelter.MVC;
+using Shelter.Mvc;
 
 namespace Shelter.Mvc.Controllers
 {
