@@ -44,9 +44,7 @@ namespace Shelter.Shared
 				TelephoneNumber = "045673456",
 				EmailAdress = "info@dierenasiel.be",
 
-				Managers = new List<Manager>{
-			  new Manager("Johan", "Janssen"),
-			  },
+				Managers = new List<Manager> { new Manager("Johan", "Janssen") },
 
 				Animals = new List<Animal> {
 						new Cat(1, "Felix", "Britse Korthaar", new DateTime(2005, 10, 09), false, true, true, true, new DateTime(2007, 10, 09), "meow I'm a cat", "catnip", true),
