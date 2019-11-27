@@ -5,6 +5,6 @@ namespace Shelter.Shared
 {
 	public class Rabbit : Animal
 	{
-		public string size { get; set; }
+		public string Size { get; set; }
 	}
 }
