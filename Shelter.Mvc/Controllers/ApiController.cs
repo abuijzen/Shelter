@@ -10,6 +10,7 @@ using System.Net.Mime;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Shelter.MVC;
 
 namespace Shelter.Mvc.Controllers
 {
@@ -28,7 +29,6 @@ namespace Shelter.Mvc.Controllers
 
 		[HttpGet]
 		/* Alle dieren van ons 1ne asiel zijn hier te vinden, maar dit zou een lijst moeten worden van alle namen +ids van de asielen*/
-
 		public ActionResult<Shelter.Shared.Shelter> Index()
 		{
 			return AnimalViewModel.Shelter;
