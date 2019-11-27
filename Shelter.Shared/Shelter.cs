@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace Shelter.Shared
 {
-	public class Shelter
+	public class Shelter : BaseDbClass
 	{
-		public int Id { get; set; }
 		public string Name { get; set; }
 		public string ImageUrl { get; set; }
 		public string Address { get; set; }

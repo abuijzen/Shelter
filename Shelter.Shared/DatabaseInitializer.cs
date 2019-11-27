@@ -38,7 +38,6 @@ namespace Shelter.Shared
 		{
 			var shelter = new Shelter()
 			{
-				Id = 1,
 				Name = "Dierenasiel",
 				ImageUrl = "image",
 				Address = "Dierenasielstraat 2",

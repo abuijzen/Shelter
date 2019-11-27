@@ -3,40 +3,10 @@ using System.Collections.Generic;
 
 namespace Shelter.Shared
 {
-	public class Animal
+	public class Animal : BaseDbClass
 	{
         // Dit is een lege constructor die de base is bij cat, dog, rabbit
-		public Animal()
-		{
 
-		}
-
-		public Animal(int id,
-						string name,
-							string race,
-							DateTime dateOfBirth,
-							bool isFertile,
-							bool isKidFriendly,
-							bool isAnimalFriendly,
-							bool isSpeciesFriendly,
-							DateTime since,
-							string bio,
-							string allergies)
-		{
-			Id = id;
-			Name = name;
-			Race = race;
-			DateOfBirth = dateOfBirth;
-			IsFertile = isFertile;
-			IsKidFriendly = isKidFriendly;
-			IsAnimalFriendly = isAnimalFriendly;
-			IsSpeciesFriendly = isSpeciesFriendly;
-			Since = since;
-			Bio = bio;
-			Allergies = allergies;
-		}
-
-		public int Id { get; set; }
 		public string Name { get; set; }
 		public string Race { get; set; }
 		public DateTime DateOfBirth { get; set; }
@@ -45,11 +15,9 @@ namespace Shelter.Shared
 		public bool IsAnimalFriendly { get; set; }
 		public bool IsSpeciesFriendly { get; set; }
 		public DateTime Since { get; set; }
-
 		public string Bio { get; set; }
-
 		public string Allergies { get; set; }
 
-
-	}
+}
+	
 }
