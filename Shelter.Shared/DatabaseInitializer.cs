@@ -49,7 +49,7 @@ namespace Shelter.Shared
 				Address = "Kievitstraat 40",
 				TelephoneNumber = "036771291",
 				EmailAdress = "/",
-			
+
 				Animals = new List<Animal> {
 						new Cat{Name = "Felix", Race = "Britse Korthaar", DateOfBirth = new DateTime(2005, 10, 10), IsFertile = false, IsKidFriendly = true, IsAnimalFriendly = true, IsSpeciesFriendly = true, Since = new DateTime(2007, 10, 09), Bio = "Felix is een iets schuwere kat die een baasje nodig heeft met veel geduld.", Allergies = "catnip", Clawed = true},
 						new Cat{Name = "Picasso", Race = "Ragdoll", DateOfBirth = new DateTime(2005, 03, 09), IsFertile = false, IsKidFriendly = true, IsAnimalFriendly = true, IsSpeciesFriendly = true, Since = new DateTime(2007, 10, 09), Bio = "Picasso is een kat die samen met Binky geplaatst dient te worden.", Allergies = "dogs", Clawed = true},
@@ -75,8 +75,46 @@ namespace Shelter.Shared
 						new Caretaker{FirstName = "Daniel",LastName = "Verstappen",},
 				}
 			};
+<<<<<<< HEAD
 			
 			_context.Shelters.Add(shelter1);
+=======
+
+			var shelter3 = new Shelter()
+			{
+				Name = "kat-lijn vzw",
+				ImageUrl = "https://www.dierendonatie.be/wp-content/uploads/2019/01/29570550_2080399628857532_4696137069563272630_n.jpg",
+				Address = "Houwaartstraat 15, 3210 Lubbeek",
+				TelephoneNumber = "0468 56 93 72",
+				EmailAdress = "info@kat-lijn.be",
+
+				Animals = new List<Animal> {
+						new Cat{Name = "Wolf", Race = "Bombay ", DateOfBirth = new DateTime(2003, 07, 22), IsFertile = true, IsKidFriendly = false, IsAnimalFriendly = false, IsSpeciesFriendly = false, Since = new DateTime(2004, 12, 01), Bio = "Een kat met de nodige kattenstreken.", Allergies = "geen", Clawed = true},
+						new Cat{Name = "Pom pom", Race = "Bengaalse tijgerkat", DateOfBirth = new DateTime(2007, 03, 29), IsFertile = false, IsKidFriendly = true, IsAnimalFriendly = true, IsSpeciesFriendly = true, Since = new DateTime(2010, 01, 15), Bio = "Een lieverd, begroet iedereen met een kopstootje.", Allergies = "geen", Clawed = true},
+						new Rabbit{Name = "Nijntje", Race="Kleurdwerg", DateOfBirth= new DateTime(2018, 04, 05), IsFertile =true, IsKidFriendly= true, IsAnimalFriendly =true, IsSpeciesFriendly=false, Since=new DateTime(2018, 08, 06), Bio="Nijntje, lief klein konijntje.", Allergies="wortels", Size="small"},
+						new Rabbit{Name = "Sneeuwtje", Race="Amerikaanse konijn", DateOfBirth= new DateTime(2019, 08, 01), IsFertile =false, IsKidFriendly= true, IsAnimalFriendly =true, IsSpeciesFriendly=false, Since=new DateTime(2019, 10, 30), Bio="Een witte konijn met een hoge aaibaarheidsfactor.", Allergies="rinitis", Size="small"},
+						new Dog{Name = "Mimi", Race = "Pommeriaan", DateOfBirth = new DateTime(2002, 11, 01), IsFertile = false, IsKidFriendly = true, IsAnimalFriendly = false, IsSpeciesFriendly = false, Since = new DateTime(2018, 02, 27), Bio = "Mimi is bang voor veel dingen maar overwint haar angsten voor haar baasjes.", Allergies = "geen", barker = true},
+						new Dog{Name = "Elisabeth III", Race = "Bobtail", DateOfBirth = new DateTime(2019, 10, 30), IsFertile = false, IsKidFriendly = true, IsAnimalFriendly = true, IsSpeciesFriendly = true, Since = new DateTime(2019, 11, 28), Bio = "Een jong meisje met klasse, dat is Elisabeth III", Allergies = "kip", barker = true},
+				},
+				Managers = new List<Manager> {
+						new Manager{FirstName = "Lodewijk",LastName = "Vander Boshen",},
+						new Manager{FirstName = "Emiel",LastName = "Waeters",},
+				},
+				Administrators = new List<Administrator> {
+						new Administrator{FirstName = "Els",LastName = "Aarendel",},
+						new Administrator{FirstName = "Anna",LastName = "Christofson",},
+						new Administrator{FirstName = "Paul",LastName = "D'haeg",},
+				},
+				Caretakers = new List<Caretaker> {
+						new Caretaker{FirstName = "Jo-Anne",LastName = "De Haeghen",},
+						new Caretaker{FirstName = "Roos",LastName = "Groenenlandt",},
+						new Caretaker{FirstName = "Eugene",LastName = "Craps",},
+				}
+			};
+
+			_context.Shelters.Add(shelter1);
+			_context.Shelters.Add(shelter3);
+>>>>>>> 636d6dba0867d7a0f62618318251410b51327344
 
 			_context.SaveChanges();
 		}
