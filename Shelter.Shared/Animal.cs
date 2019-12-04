@@ -17,6 +17,7 @@ namespace Shelter.Shared
 		public DateTime Since { get; set; }
 		public string Bio { get; set; }
 		public string Allergies { get; set; }
+		public int ShelterId { get; set; }
 
 }
 	

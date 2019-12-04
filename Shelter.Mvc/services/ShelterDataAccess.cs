@@ -31,16 +31,14 @@ namespace Shelter.Mvc
 		public IEnumerable<Shared.Shelter> GetAllSheltersFull()
 		{
 			return _context.Shelters
-			  .Include(shelter => shelter.Animals).ThenInclude(animal => animal.Race)
+			  .Include(shelter => shelter.Animals)
 			  .Include(shelter => shelter.Managers);
 		}
 
 		public Animal GetAnimalByShelterAndId(int shelterId, int animalId)
 		{
 			return _context.Animals
-			  .Include(animal => animal.Race)
-			  //.FirstOrDefault(x => x.ShelterId == shelterId && x.Id == shelterId);
-			  .FirstOrDefault(x => x.Id == animalId);
+			  .FirstOrDefault(x => x.ShelterId == shelterId && x.Id == animalId);
 		}
 
 		public IEnumerable<Animal> GetAnimals(int shelterId)
