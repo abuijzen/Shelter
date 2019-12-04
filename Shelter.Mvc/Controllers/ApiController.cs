@@ -72,6 +72,12 @@ namespace Shelter.Mvc.Controllers
 			var animal = _dataAccess.GetAnimalByShelterAndId(shelterId, animalId);
 			return animal == default(Shared.Animal) ? (IActionResult)NotFound() : Ok(animal);
 		}
-		
+
+		[HttpPut("{shelterId}/animals/{animalId}")]
+		public IActionResult UpdateAnimal(int shelterId, int animalId, [FromBody]Shared.Animal animal)
+		{
+			return Ok(animal);
+		}
+
 	}
 }
