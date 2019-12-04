@@ -16,3 +16,5 @@ namespace Shelter.UnitTests
 		}
 	}
 }
+
+/*---Wat we gaan testen---*/
