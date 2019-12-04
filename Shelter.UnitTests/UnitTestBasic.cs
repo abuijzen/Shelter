@@ -29,12 +29,9 @@ namespace Shelter.UnitTests
       _mockedLogger.VerifyAll();
     }
 
-    // These tests can be run using dotnet test
 
-
-
-
-	/* testen of je alle shelters kan opvragen en of de inhoud volledig hetzelfde is*/
+	/* testen of je alle shelters kan opvragen en teruggeven
+	+ checken of de inhoud volledig hetzelfde is van beide*/
     [Test]
     public void Test_GetAll()
     {
@@ -42,8 +39,6 @@ namespace Shelter.UnitTests
       var shelters = new List<Shelter.Shared.Shelter>();
 
       _mockedDataAccess.Setup(x => x.GetAllShelters()).Returns(shelters);
-      // uncomment the next line, run the test, read the exception message.
-      // mockedDataAccess.Setup(x => x.GetAllBreweriesFull()).Returns(breweries);
 
       var result = _controller.GetAllShelters();
 
@@ -53,6 +48,29 @@ namespace Shelter.UnitTests
       Assert.IsInstanceOf(typeof(OkObjectResult), result);
       Assert.AreEqual(((OkObjectResult)result).Value, shelters);
     }
+
+	/*Check of combinatie dier-type (hond, kat of konijn) en naam binnen één shelter uniek is. */
+	/* momenteel = alle dieren checken en kijken of de inhoud die teruggegeven wordt ook klopt */
+
+	[Test]
+    public void Test_GetAllAnimals()
+    {
+	
+      var shelters = new List<Shelter.Shared.Shelter>();
+      _mockedDataAccess.Setup(x => x.GetShelterAnimals()).Returns(shelters);
+
+      var result = _controller.GetShelterAnimals();
+
+      // uncomment this obviously wrong line, see what happens
+      // Assert.IsInstanceOf(typeof(NotFoundResult), result);
+
+      Assert.IsInstanceOf(typeof(OkObjectResult), result);
+      Assert.AreEqual(((OkObjectResult)result).Value, shelters);
+    }
+
+
+
+
 /* 
     [Test]
     public void Test_GetOneHappyFlow()
