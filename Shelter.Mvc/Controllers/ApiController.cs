@@ -72,5 +72,6 @@ namespace Shelter.Mvc.Controllers
 			var animal = _dataAccess.GetAnimalByShelterAndId(shelterId, animalId);
 			return animal == default(Shared.Animal) ? (IActionResult)NotFound() : Ok(animal);
 		}
+		
 	}
 }
