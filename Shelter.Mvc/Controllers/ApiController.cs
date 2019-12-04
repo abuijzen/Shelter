@@ -56,6 +56,12 @@ namespace Shelter.Mvc.Controllers
       		//return shelter == default(Shared.Shelter) ? (IActionResult)NotFound() : Ok(shelter);
 		}*/
 
+
+		
+
+
+
+
 		/* Alle Dieren binnen een Shelter */
 		[HttpGet("{id}/animals")]
 		public IActionResult GetShelterAnimals(int id)
