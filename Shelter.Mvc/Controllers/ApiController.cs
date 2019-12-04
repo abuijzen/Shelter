@@ -42,7 +42,6 @@ namespace Shelter.Mvc.Controllers
 		[HttpGet("full")]
 		public IActionResult GetAllSheltersFull()
 		{
-			// You return a list here, "not found" is not an issue -- an empty list is still a valid list.
 			return Ok(_dataAccess.GetAllSheltersFull());
 		}
 
@@ -72,6 +71,6 @@ namespace Shelter.Mvc.Controllers
 			var animal = _dataAccess.GetAnimalByShelterAndId(shelterId, animalId);
 			return animal == default(Shared.Animal) ? (IActionResult)NotFound() : Ok(animal);
 		}
-		
+
 	}
 }

@@ -31,7 +31,7 @@ namespace Shelter.Mvc
 		public IEnumerable<Shared.Shelter> GetAllSheltersFull()
 		{
 			return _context.Shelters
-			  .Include(shelter => shelter.Animals).ThenInclude(animal => animal.Race)
+			  .Include(shelter => shelter.Animals)
 			  .Include(shelter => shelter.Managers);
 		}
 
