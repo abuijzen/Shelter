@@ -18,6 +18,7 @@ namespace Shelter.Mvc
         void CreateRabbit(Rabbit rabbit);
         void CreateDog(Dog dog);
         void CreateShelter(Shared.Shelter shelter);
+        void UpdateAnimal(int shelterId, int animalId);
     }
 
 
@@ -94,6 +95,16 @@ namespace Shelter.Mvc
         {
             _context.Shelters
             .Add(shelter);
+            _context.SaveChanges();
+        }
+
+        public void UpdateAnimal(int shelterId, int animalId)
+        {
+            var animal = _context.Animals
+         .FirstOrDefault(x => x.ShelterId == shelterId && x.Id == animalId);
+
+            _context.Animals
+            .Update(animal);
             _context.SaveChanges();
         }
     }

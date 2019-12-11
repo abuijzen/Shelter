@@ -70,11 +70,11 @@ namespace Shelter.Mvc.Controllers
             return animal == default(Shared.Animal) ? (IActionResult)NotFound() : Ok(animal);
         }
 
-        [HttpPut("{shelterId}/animals/{animalId}")]
+        /*[HttpPut("{shelterId}/animals/{animalId}")]
         public IActionResult UpdateAnimal(int shelterId, int animalId, [FromBody]Shared.Animal animal)
         {
             return Ok(animal);
-        }
+        }*/
 
         /*delete een dier*/
         [HttpDelete("{shelterId}/animals/{animalId}")]
@@ -110,6 +110,15 @@ namespace Shelter.Mvc.Controllers
             _dataAccess.CreateShelter(shelter);
             return Ok();
         }
+
+        [HttpPut("{shelterId}/animals/{animalId}")]
+        public IActionResult UpdateAnimal(int shelterId, int animalId, [FromBody]Shared.Animal animal)
+        {
+            _dataAccess.UpdateAnimal(shelterId, animalId);
+            return Ok();
+        }
+
+
 
 
     }
