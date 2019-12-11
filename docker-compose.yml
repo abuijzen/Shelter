@@ -1,0 +1,20 @@
+version: "3"
+services:
+  # dotnet application
+  app:
+    container_name: dotnet_shelter
+    build:
+      context: ./
+      dockerfile: Docker/app.dockerfile
+    ports:
+      - 8080:80
+  # mysql database
+  db:
+    container_name: mysql_database
+    image: mysql:5.7
+    environment:
+      - "MYSQL_DATABASE=shelter"
+      - "MYSQL_USER=root"
+      - "MYSQL_PASSWORD=root"
+      - "MYSQL_ROOT_PASSWORD=root"
+    restart: always

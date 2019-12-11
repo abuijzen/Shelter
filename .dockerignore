@@ -1,0 +1,6 @@
+Shelter.Mvc/bin/
+Shelter.Mvc/obj/
+Shelter.Mvc/global.json
+Docker/app.dockerfile
+.dockerignore
+Shelter.Mvc/*.user

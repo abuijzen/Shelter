@@ -1,11 +1,18 @@
-FROM microsoft/aspnetcore:2.0.0
-ENV BUILD_CONFIG Debug
-LABEL maintainer=some_email@email_server.com \
-	Name=webapp-${BUILD_CONFIG} \
-	Version=0.0.1
-ARG URL_PORT
+FROM microsoft/aspnetcore-build:2.0 AS build-env
 WORKDIR /app
-ENV NUGET_XMLDOC_MODE skip
-ENV ASPNETCORE_URLS http://*:${URL_PORT}
-COPY ./publish .
-ENTRYPOINT [ "dotnet", "ContainerProd.dll" ]
+
+# Copy csproj and restore as distinct layers
+#COPY *.csproj ./
+RUN dotnet restore
+
+# Copy everything else and build
+COPY ./Shelter.Mvc ./Shelter.Mvc
+COPY ./Shelter.Shared ./Shelter.Shared
+COPY ./Shelter.UnitTests ./Shelter.UnitTests
+RUN dotnet publish -c Release -o out
+
+# Build runtime image
+FROM microsoft/aspnetcore:2.0
+WORKDIR /app
+COPY --from=build-env /app/out .
+ENTRYPOINT ["dotnet", "aspnetapp.dll"]
