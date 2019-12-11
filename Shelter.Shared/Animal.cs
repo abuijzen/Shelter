@@ -1,11 +1,12 @@
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Collections.Generic;
 
 namespace Shelter.Shared
 {
 	public class Animal : BaseDbClass
 	{
-        // Dit is een lege constructor die de base is bij cat, dog, rabbit
+		// Dit is een lege constructor die de base is bij cat, dog, rabbit
 
 		public string Name { get; set; }
 		public string Race { get; set; }
@@ -19,6 +20,6 @@ namespace Shelter.Shared
 		public string Allergies { get; set; }
 		public int ShelterId { get; set; }
 
-}
-	
+	}
+
 }
