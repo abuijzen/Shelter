@@ -83,5 +83,14 @@ namespace Shelter.Mvc.Controllers
 			return Ok(animal);
 		}
 
+
+		[HttpGet("{shelterId}/animals/{animalName}")]
+		public IActionResult CheckIfUnique(int shelterId, string animalName)
+		{
+			var animal = _dataAccess.CheckIfUnique(shelterId, animalName);
+			return animal == default(Shared.Animal) ? (IActionResult)NotFound() : Ok(animal);
+		}
+
 	}
 }
+ 
