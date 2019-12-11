@@ -47,18 +47,12 @@ namespace Shelter.Mvc.Controllers
 
 		[HttpGet("{id}")]
 		/* Hier is het de bedoeling dat je de lijst van dieren die in 1 asiel zitten krijgt*/
-		 public IActionResult GetShelter(int id)
-    		{
-    
-      			var shelter = _dataAccess.GetShelterById(id); 
-      			return shelter == default(Shared.Shelter) ? (IActionResult)NotFound() : Ok(shelter);
-    }
+		public IActionResult GetShelter(int id)
+		{
 
-
-		
-
-
-
+			var shelter = _dataAccess.GetShelterById(id);
+			return shelter == default(Shared.Shelter) ? (IActionResult)NotFound() : Ok(shelter);
+		}
 
 		/* Alle Dieren binnen een Shelter */
 		[HttpGet("{id}/animals")]
@@ -80,6 +74,11 @@ namespace Shelter.Mvc.Controllers
 		[HttpPut("{shelterId}/animals/{animalId}")]
 		public IActionResult UpdateAnimal(int shelterId, int animalId, [FromBody]Shared.Animal animal)
 		{
+			/*var currentAnimal = await _dataAccess.FindByIdAsync(animalId);
+			
+			var updatedAnimal = _dataAccess.UpdateAnimal(shelterId, animalId);
+			return updatedAnimal == default(IEnumerable<Animal>) ? (IActionResult)NotFound() : Ok(updatedAnimal);*/
+
 			return Ok(animal);
 		}
 
