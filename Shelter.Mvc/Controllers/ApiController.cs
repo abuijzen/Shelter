@@ -61,6 +61,14 @@ namespace Shelter.Mvc.Controllers
             return animals == default(IEnumerable<Animal>) ? (IActionResult)NotFound() : Ok(animals);
         }
 
+        /* Alle Honden van een Shelter */
+        [HttpGet("{shelterId}/dogs")]
+        public IActionResult GetShelterDogs(int shelterId)
+        {
+            var dogs = _dataAccess.GetDogs(shelterId);
+            return dogs == default(IEnumerable<Dog>) ? (IActionResult)NotFound() : Ok(dogs);
+        }
+
         /* Het dier van een bepaalde shelter zijn info*/
 
         [HttpGet("{shelterId}/animals/{animalId}")]
@@ -70,11 +78,6 @@ namespace Shelter.Mvc.Controllers
             return animal == default(Shared.Animal) ? (IActionResult)NotFound() : Ok(animal);
         }
 
-        /*[HttpPut("{shelterId}/animals/{animalId}")]
-        public IActionResult UpdateAnimal(int shelterId, int animalId, [FromBody]Shared.Animal animal)
-        {
-            return Ok(animal);
-        }*/
 
         /*delete een dier*/
         [HttpDelete("{shelterId}/animals/{animalId}")]
@@ -84,12 +87,14 @@ namespace Shelter.Mvc.Controllers
             return Ok();
         }
 
+        /*Maak een kat aan*/
         [HttpPost("animals/cat")]
         public IActionResult CreateCat([FromBody]Shared.Cat cat)
         {
             _dataAccess.CreateCat(cat);
             return Ok();
         }
+        /*Maak een konijn aan*/
         [HttpPost("animals/rabbit")]
         public IActionResult CreateRabbit([FromBody]Shared.Rabbit rabbit)
         {
@@ -97,6 +102,7 @@ namespace Shelter.Mvc.Controllers
             return Ok();
         }
 
+        /*Maak een hond aan*/
         [HttpPost("animals/dog")]
         public IActionResult CreateDog([FromBody]Shared.Dog dog)
         {
@@ -104,6 +110,7 @@ namespace Shelter.Mvc.Controllers
             return Ok();
         }
 
+        /*Maak een asiel aan*/
         [HttpPost("shelters")]
         public IActionResult CreateShelter([FromBody]Shared.Shelter shelter)
         {
@@ -111,11 +118,21 @@ namespace Shelter.Mvc.Controllers
             return Ok();
         }
 
+        /*Pas een dier aan*/
         [HttpPut("{shelterId}/animals/{animalId}")]
         public IActionResult UpdateAnimal(int shelterId, int animalId, [FromBody]Shared.Animal animal)
         {
 
             _dataAccess.UpdateAnimal(shelterId, animalId, animal);
+            return Ok();
+        }
+
+        /*Pas een hond aan*/
+        [HttpPut("{shelterId}/dogs/{animalId}/")]
+        public IActionResult UpdateDog(int animalId, int shelterId, [FromBody]Dog dog)
+        {
+
+            _dataAccess.UpdateDog(animalId, shelterId, dog);
             return Ok();
         }
 

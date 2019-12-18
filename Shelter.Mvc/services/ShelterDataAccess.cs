@@ -12,6 +12,7 @@ namespace Shelter.Mvc
         IEnumerable<Shared.Shelter> GetAllSheltersFull();
         Shared.Shelter GetShelterById(int id);
         IEnumerable<Animal> GetAnimals(int shelterId);
+        IEnumerable<Dog> GetDogs(int shelterId);
         Animal GetAnimalByShelterAndId(int shelterId, int animalId);
         void DeleteAnimalByshelterIdAndId(int shelterId, int animalId);
         void CreateCat(Cat cat);
@@ -19,6 +20,7 @@ namespace Shelter.Mvc
         void CreateDog(Dog dog);
         void CreateShelter(Shared.Shelter shelter);
         void UpdateAnimal(int shelterId, int animalId, Animal animal);
+        void UpdateDog(int animalId, int shelterId, Dog dog);
     }
 
 
@@ -54,6 +56,12 @@ namespace Shelter.Mvc
             return _context.Shelters
             .Include(shelter => shelter.Animals)
             .FirstOrDefault(x => x.Id == shelterId)?.Animals;
+        }
+
+        public IEnumerable<Dog> GetDogs(int shelterId)
+        {
+            return _context.Dogs
+            .Where(x => x.ShelterId == shelterId).ToList();
         }
 
         public Shared.Shelter GetShelterById(int id)
@@ -94,22 +102,61 @@ namespace Shelter.Mvc
         }
         public void CreateRabbit(Rabbit rabbit)
         {
+            var newRabbit = new Rabbit();
+
+            newRabbit.Name = rabbit.Name;
+            newRabbit.Race = rabbit.Race;
+            newRabbit.DateOfBirth = rabbit.DateOfBirth;
+            newRabbit.IsFertile = rabbit.IsFertile;
+            newRabbit.IsKidFriendly = rabbit.IsKidFriendly;
+            newRabbit.IsAnimalFriendly = rabbit.IsAnimalFriendly;
+            newRabbit.IsSpeciesFriendly = rabbit.IsSpeciesFriendly;
+            newRabbit.Since = rabbit.Since;
+            newRabbit.Bio = rabbit.Bio;
+            newRabbit.Allergies = rabbit.Allergies;
+            newRabbit.ShelterId = rabbit.ShelterId;
+            newRabbit.Size = rabbit.Size;
+
             _context.Animals
-            .Add(rabbit);
+            .Add(newRabbit);
             _context.SaveChanges();
         }
 
         public void CreateDog(Dog dog)
         {
+            var newDog = new Dog();
+
+            newDog.Name = dog.Name;
+            newDog.Race = dog.Race;
+            newDog.DateOfBirth = dog.DateOfBirth;
+            newDog.IsFertile = dog.IsFertile;
+            newDog.IsKidFriendly = dog.IsKidFriendly;
+            newDog.IsAnimalFriendly = dog.IsAnimalFriendly;
+            newDog.IsSpeciesFriendly = dog.IsSpeciesFriendly;
+            newDog.Since = dog.Since;
+            newDog.Bio = dog.Bio;
+            newDog.Allergies = dog.Allergies;
+            newDog.ShelterId = dog.ShelterId;
+            newDog.Barker = dog.Barker;
+
             _context.Animals
-            .Add(dog);
+            .Add(newDog);
             _context.SaveChanges();
         }
 
         public void CreateShelter(Shared.Shelter shelter)
         {
+            /*Shared.Shelter schrijven we omdat het programma niet het onderscheid kan maken met namespace en klasse*/
+            var newShelter = new Shared.Shelter();
+
+            newShelter.Name = shelter.Name;
+            newShelter.ImageUrl = shelter.ImageUrl;
+            newShelter.Address = shelter.Address;
+            newShelter.TelephoneNumber = shelter.TelephoneNumber;
+            newShelter.EmailAdress = shelter.EmailAdress;
+
             _context.Shelters
-            .Add(shelter);
+            .Add(newShelter);
             _context.SaveChanges();
         }
 
@@ -131,6 +178,27 @@ namespace Shelter.Mvc
             existingAnimal.ShelterId = animal.ShelterId;
 
             _context.Update(existingAnimal);
+            _context.SaveChanges();
+        }
+
+        public void UpdateDog(int animalId, int shelterId, Dog dog)
+        {
+            var existingDog = _context.Dogs
+            .FirstOrDefault(x => x.Id == animalId && x.ShelterId == shelterId);
+
+            existingDog.Name = dog.Name;
+            existingDog.Race = dog.Race;
+            existingDog.DateOfBirth = dog.DateOfBirth;
+            existingDog.IsFertile = dog.IsFertile;
+            existingDog.IsKidFriendly = dog.IsKidFriendly;
+            existingDog.IsAnimalFriendly = dog.IsAnimalFriendly;
+            existingDog.IsSpeciesFriendly = dog.IsSpeciesFriendly;
+            existingDog.Since = dog.Since;
+            existingDog.Bio = dog.Bio;
+            existingDog.Allergies = dog.Allergies;
+            existingDog.Barker = dog.Barker;
+
+            _context.Update(existingDog);
             _context.SaveChanges();
         }
     }
