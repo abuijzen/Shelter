@@ -13,74 +13,114 @@ using Shelter.Mvc;
 
 namespace Shelter.Mvc.Controllers
 {
-	[ApiController]
-	[Route("[controller]")]
-	public class ApiController : ControllerBase
-	{
-		private readonly IShelterDataAccess _dataAccess;
-		private readonly ILogger<ApiController> _logger;
+    [ApiController]
+    [Route("[controller]")]
+    public class ApiController : ControllerBase
+    {
+        private readonly IShelterDataAccess _dataAccess;
+        private readonly ILogger<ApiController> _logger;
 
-		public ApiController(ILogger<ApiController> logger, IShelterDataAccess dataAccess)
-		{
-			_dataAccess = dataAccess;
-			_logger = logger;
-		}
+        public ApiController(ILogger<ApiController> logger, IShelterDataAccess dataAccess)
+        {
+            _dataAccess = dataAccess;
+            _logger = logger;
+        }
 
-		[HttpGet]
-		/* Alle dieren van ons 1ne asiel zijn hier te vinden, maar dit zou een lijst moeten worden van alle namen +ids van de asielen*/
-		public ActionResult<Shelter.Shared.Shelter> Index()
-		{
-			return Ok(_dataAccess.GetAllSheltersFull());
-		}
+        [HttpGet]
+        /* Alle dieren van ons 1ne asiel zijn hier te vinden, maar dit zou een lijst moeten worden van alle namen +ids van de asielen*/
+        public ActionResult<Shelter.Shared.Shelter> Index()
+        {
+            return Ok(_dataAccess.GetAllSheltersFull());
+        }
 
-		[HttpGet("/")]
-		public IActionResult GetAllShelters()
-		{
-			return Ok(_dataAccess.GetAllShelters());
-		}
+        [HttpGet("/")]
+        public IActionResult GetAllShelters()
+        {
+            return Ok(_dataAccess.GetAllShelters());
+        }
 
-		[HttpGet("full")]
-		public IActionResult GetAllSheltersFull()
-		{
-			return Ok(_dataAccess.GetAllSheltersFull());
-		}
+        [HttpGet("full")]
+        public IActionResult GetAllSheltersFull()
+        {
+            return Ok(_dataAccess.GetAllSheltersFull());
+        }
 
-		[HttpGet("{id}")]
-		/* Hier is het de bedoeling dat je de lijst van dieren die in 1 asiel zitten krijgt*/
-		public IActionResult GetShelter(int id)
-		{
+        [HttpGet("{id}")]
+        /* Hier is het de bedoeling dat je de lijst van dieren die in 1 asiel zitten krijgt*/
+        public IActionResult GetShelter(int id)
+        {
+            var shelter = _dataAccess.GetShelterById(id);
+            return shelter == default(Shared.Shelter) ? (IActionResult)NotFound() : Ok(shelter);
+        }
 
-			var shelter = _dataAccess.GetShelterById(id);
-			return shelter == default(Shared.Shelter) ? (IActionResult)NotFound() : Ok(shelter);
-		}
+        /* Alle Dieren binnen een Shelter */
+        [HttpGet("{id}/animals")]
+        public IActionResult GetShelterAnimals(int id)
+        {
+            var animals = _dataAccess.GetAnimals(id);
+            return animals == default(IEnumerable<Animal>) ? (IActionResult)NotFound() : Ok(animals);
+        }
 
-		/* Alle Dieren binnen een Shelter */
-		[HttpGet("{id}/animals")]
-		public IActionResult GetShelterAnimals(int id)
-		{
-			var animals = _dataAccess.GetAnimals(id);
-			return animals == default(IEnumerable<Animal>) ? (IActionResult)NotFound() : Ok(animals);
-		}
+        /* Het dier van een bepaalde shelter zijn info*/
 
-		/* Het dier van een bepaalde shelter zijn info*/
+        [HttpGet("{shelterId}/animals/{animalId}")]
+        public IActionResult GetAnimalDetails(int shelterId, int animalId)
+        {
+            var animal = _dataAccess.GetAnimalByShelterAndId(shelterId, animalId);
+            return animal == default(Shared.Animal) ? (IActionResult)NotFound() : Ok(animal);
+        }
 
-		[HttpGet("{shelterId}/animals/{animalId}")]
-		public IActionResult GetAnimalDetails(int shelterId, int animalId)
-		{
-			var animal = _dataAccess.GetAnimalByShelterAndId(shelterId, animalId);
-			return animal == default(Shared.Animal) ? (IActionResult)NotFound() : Ok(animal);
-		}
+        /*[HttpPut("{shelterId}/animals/{animalId}")]
+        public IActionResult UpdateAnimal(int shelterId, int animalId, [FromBody]Shared.Animal animal)
+        {
+            return Ok(animal);
+        }*/
 
-		[HttpPut("{shelterId}/animals/{animalId}")]
-		public IActionResult UpdateAnimal(int shelterId, int animalId, [FromBody]Shared.Animal animal)
-		{
-			/*var currentAnimal = await _dataAccess.FindByIdAsync(animalId);
-			
-			var updatedAnimal = _dataAccess.UpdateAnimal(shelterId, animalId);
-			return updatedAnimal == default(IEnumerable<Animal>) ? (IActionResult)NotFound() : Ok(updatedAnimal);*/
+        /*delete een dier*/
+        [HttpDelete("{shelterId}/animals/{animalId}")]
+        public IActionResult Delete(int shelterId, int animalId)
+        {
+            _dataAccess.DeleteAnimalByshelterIdAndId(shelterId, animalId);
+            return Ok();
+        }
 
-			return Ok(animal);
-		}
+        [HttpPost("animals/cat")]
+        public IActionResult CreateCat([FromBody]Shared.Cat cat)
+        {
+            _dataAccess.CreateCat(cat);
+            return Ok();
+        }
+        [HttpPost("animals/rabbit")]
+        public IActionResult CreateRabbit([FromBody]Shared.Rabbit rabbit)
+        {
+            _dataAccess.CreateRabbit(rabbit);
+            return Ok();
+        }
 
-	}
+        [HttpPost("animals/dog")]
+        public IActionResult CreateDog([FromBody]Shared.Dog dog)
+        {
+            _dataAccess.CreateDog(dog);
+            return Ok();
+        }
+
+        [HttpPost("shelters")]
+        public IActionResult CreateShelter([FromBody]Shared.Shelter shelter)
+        {
+            _dataAccess.CreateShelter(shelter);
+            return Ok();
+        }
+
+        [HttpPut("{shelterId}/animals/{animalId}")]
+        public IActionResult UpdateAnimal(int shelterId, int animalId, [FromBody]Shared.Animal animal)
+        {
+
+            _dataAccess.UpdateAnimal(shelterId, animalId, animal);
+            return Ok();
+        }
+
+
+
+
+    }
 }
