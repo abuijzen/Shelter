@@ -114,7 +114,8 @@ namespace Shelter.Mvc.Controllers
         [HttpPut("{shelterId}/animals/{animalId}")]
         public IActionResult UpdateAnimal(int shelterId, int animalId, [FromBody]Shared.Animal animal)
         {
-            _dataAccess.UpdateAnimal(shelterId, animalId);
+
+            _dataAccess.UpdateAnimal(shelterId, animalId, animal);
             return Ok();
         }
 

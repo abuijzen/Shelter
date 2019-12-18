@@ -18,7 +18,7 @@ namespace Shelter.Mvc
         void CreateRabbit(Rabbit rabbit);
         void CreateDog(Dog dog);
         void CreateShelter(Shared.Shelter shelter);
-        void UpdateAnimal(int shelterId, int animalId);
+        void UpdateAnimal(int shelterId, int animalId, Animal animal);
     }
 
 
@@ -73,8 +73,23 @@ namespace Shelter.Mvc
 
         public void CreateCat(Cat cat)
         {
+            var newCat = new Cat();
+
+            newCat.Name = cat.Name;
+            newCat.Race = cat.Race;
+            newCat.DateOfBirth = cat.DateOfBirth;
+            newCat.IsFertile = cat.IsFertile;
+            newCat.IsKidFriendly = cat.IsKidFriendly;
+            newCat.IsAnimalFriendly = cat.IsAnimalFriendly;
+            newCat.IsSpeciesFriendly = cat.IsSpeciesFriendly;
+            newCat.Since = cat.Since;
+            newCat.Bio = cat.Bio;
+            newCat.Allergies = cat.Allergies;
+            newCat.ShelterId = cat.ShelterId;
+            newCat.Clawed = cat.Clawed;
             _context.Animals
-            .Add(cat);
+
+            .Add(newCat);
             _context.SaveChanges();
         }
         public void CreateRabbit(Rabbit rabbit)
@@ -98,13 +113,24 @@ namespace Shelter.Mvc
             _context.SaveChanges();
         }
 
-        public void UpdateAnimal(int shelterId, int animalId)
+        public void UpdateAnimal(int shelterId, int animalId, Shared.Animal animal)
         {
-            var animal = _context.Animals
-         .FirstOrDefault(x => x.ShelterId == shelterId && x.Id == animalId);
+            var existingAnimal = _context.Animals
+                .FirstOrDefault(x => x.ShelterId == shelterId && x.Id == animalId);
 
-            _context.Animals
-            .Update(animal);
+            existingAnimal.Name = animal.Name;
+            existingAnimal.Race = animal.Race;
+            existingAnimal.DateOfBirth = animal.DateOfBirth;
+            existingAnimal.IsFertile = animal.IsFertile;
+            existingAnimal.IsKidFriendly = animal.IsKidFriendly;
+            existingAnimal.IsAnimalFriendly = animal.IsAnimalFriendly;
+            existingAnimal.IsSpeciesFriendly = animal.IsSpeciesFriendly;
+            existingAnimal.Since = animal.Since;
+            existingAnimal.Bio = animal.Bio;
+            existingAnimal.Allergies = animal.Allergies;
+            existingAnimal.ShelterId = animal.ShelterId;
+
+            _context.Update(existingAnimal);
             _context.SaveChanges();
         }
     }
