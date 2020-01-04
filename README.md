@@ -8,8 +8,6 @@
 
 ## Docker
 
-(Does not fully work yet... 😤)
-
 - start our docker: `docker-machine start default`<br>
 - to build the images: `docker-compose build`<br>
 - to build the container: `docker-compose up`<br>
