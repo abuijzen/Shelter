@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Collections.Generic;
 
-namespace Shelter.Shared
+namespace Shelter.shared
 {
 	public class Animal : BaseDbClass
 	{

@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shelter.Mvc\Shelter.Mvc.csproj" />
-    <ProjectReference Include="..\Shelter.Shared\Shelter.Shared.csproj" />
+    <ProjectReference Include="..\Shelter.mvc\Shelter.mvc.csproj" />
+    <ProjectReference Include="..\Shelter.shared\Shelter.shared.csproj" />
   </ItemGroup>
 
 </Project>

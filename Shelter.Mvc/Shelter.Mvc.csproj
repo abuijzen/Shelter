@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shelter.Shared\Shelter.Shared.csproj" />
+    <ProjectReference Include="..\Shelter.shared\Shelter.shared.csproj" />
   </ItemGroup>
 
 

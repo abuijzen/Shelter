@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
 
-namespace Shelter.Shared
+namespace Shelter.shared
 {
 	public interface IDatabaseInitializer
 	{
@@ -77,7 +77,7 @@ namespace Shelter.Shared
 				Address = "Toekomststraat 4",
 				TelephoneNumber = "014658626",
 				EmailAdress = "veeweyde.weelde@skynet.be",
-			
+
 				Animals = new List<Animal> {
 						new Cat{Name = "Ludo", Race = "Europeese korthaar", DateOfBirth = new DateTime(2015, 12, 10), IsFertile = false, IsKidFriendly = true, IsAnimalFriendly = false, IsSpeciesFriendly = false, Since = new DateTime(2018, 02, 21), Bio = "Ludo is een lievertje maar niet voor andere dieren.", Allergies = "geen", Clawed = true},
 						new Dog{Name = "Puk", Race = "Franse Bulldog", DateOfBirth = new DateTime(2018, 09, 19), IsFertile = false, IsKidFriendly = true, IsAnimalFriendly = true, IsSpeciesFriendly = true, Since = new DateTime(2019, 05, 20), Bio = "Puk is een echte ronkende franse buldog, door gezondheidsproblemen is hij bij ons beland", Allergies = "Kip", Barker = true},
@@ -101,7 +101,7 @@ namespace Shelter.Shared
 						new Caretaker{FirstName = "Koen",LastName = "Rogge",},
 				}
 			};
-		
+
 
 			var shelter3 = new Shelter()
 			{

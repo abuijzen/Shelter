@@ -1,7 +1,7 @@
   
 using Microsoft.AspNetCore.Mvc;
 
-namespace Shelter.Mvc.Controllers
+namespace Shelter.mvc.Controllers
 {
     [ApiController]
     public class MyControllerBase : ControllerBase

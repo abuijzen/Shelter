@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Shelter.Shared
+namespace Shelter.shared
 {
 	public class Rabbit : Animal
 	{
