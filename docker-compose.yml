@@ -1,20 +1,29 @@
-version: "3"
+version: "3.5"
+
+networks:
+  localdev:
+    name: localdev
+
 services:
-  # dotnet application
-  app:
-    container_name: dotnet_shelter
-    build:
-      context: ./
-      dockerfile: Docker/app.dockerfile
+  main-api:
+    build: .
+    restart: always
     ports:
-      - 8080:80
-  # mysql database
-  db:
-    container_name: mysql_database
+      - "8080:80"
+    depends_on:
+      - db-server
+    networks:
+      - localdev
+
+  db-server:
+    container_name: db-server
     image: mysql:5.7
     environment:
       - "MYSQL_DATABASE=shelter"
       - "MYSQL_USER=root"
       - "MYSQL_PASSWORD=root"
       - "MYSQL_ROOT_PASSWORD=root"
-    restart: always
+    ports:
+      - "1400:1433"
+    networks:
+      - localdev
