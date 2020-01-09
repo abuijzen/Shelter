@@ -1,10 +1,6 @@
-*/bin
-*/obj
+Shelter.Mvc/bin/
+Shelter.Mvc/obj/
+Shelter.Mvc/global.json
+Docker/app.dockerfile
 .dockerignore
-.env
-.git
-.gitignore
-.vs
-.vscode
-**/.toolstarget
-.idea
+Shelter.Mvc/*.user
