@@ -143,10 +143,11 @@ Shelter.mvc/shelters.db
 Shelter.mvc/shelters.db-shm
 Shelter.mvc/shelters.db-wal
 Shelter.mvc/Models
+Shelter.mvc/services
 
 # After docker
 
 Docker/*
 
-Shelter.mvc/*
+Shelter.Mvc/*
 Shetler.Shared/*
