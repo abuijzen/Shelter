@@ -1,6 +1,6 @@
-Shelter.Mvc/bin/
-Shelter.Mvc/obj/
-Shelter.Mvc/global.json
+Shelter.mvc/bin/
+Shelter.mvc/obj/
+Shelter.mvc/global.json
 Docker/app.dockerfile
 .dockerignore
-Shelter.Mvc/*.user
+Shelter.mvc/*.user

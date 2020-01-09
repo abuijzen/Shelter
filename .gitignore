@@ -134,10 +134,10 @@ _NCrunch*
 
 # Database
 
-Shelter.Mvc/shelters.db
-Shelter.Mvc/shelters.db-shm
-Shelter.Mvc/shelters.db-wal
-Shelter.Mvc/Models
+Shelter.mvc/shelters.db
+Shelter.mvc/shelters.db-shm
+Shelter.mvc/shelters.db-wal
+Shelter.mvc/Models
 
 Shelter.mvc/shelters.db
 Shelter.mvc/shelters.db-shm
@@ -148,5 +148,5 @@ Shelter.mvc/Models
 
 Docker/*
 
-Shelter.Mvc/*
+Shelter.mvc/*
 Shetler.Shared/*

@@ -1,11 +1,12 @@
 using System;
 using System.Collections.Generic;
 
-namespace Shelter.Shared
+namespace Shelter.shared
 {
 	public class Dog : Animal
 	{
 
-		  public bool Barker { get; set; }
-	
-	}}
+		public bool Barker { get; set; }
+
+	}
+}

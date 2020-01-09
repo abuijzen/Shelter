@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Shelter.Mvc/Shelter.Mvc.csproj",
+                "${workspaceFolder}/Shelter.mvc/Shelter.mvc.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Shelter.Mvc/Shelter.Mvc.csproj",
+                "${workspaceFolder}/Shelter.mvc/Shelter.mvc.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -32,7 +32,7 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/Shelter.Mvc/Shelter.Mvc.csproj",
+                "${workspaceFolder}/Shelter.mvc/Shelter.mvc.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],

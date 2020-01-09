@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Shelter.Shared
+namespace Shelter.shared
 {
 	class Program
 	{

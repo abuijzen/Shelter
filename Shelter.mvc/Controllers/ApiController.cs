@@ -9,9 +9,9 @@ using System.Net.Mime;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Shelter.Mvc;
+using Shelter.mvc;
 
-namespace Shelter.Mvc.Controllers
+namespace Shelter.mvc.Controllers
 {
     [ApiController]
     [Route("[controller]")]
