@@ -12,3 +12,8 @@
 - to build the images: `docker-compose build`<br>
 - to build the container: `docker-compose up`<br>
 - now go to `localhost:8080` (mac) or `ip:8080` (windows)<br>
+
+## Database & Migrations
+
+- toevoegen van een migration: `dotnet ef migrations add nameOfMigration`
+- verwijderen van de laatste migration: `dotnet ef migrations remove --force`
