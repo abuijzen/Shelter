@@ -23,7 +23,8 @@ namespace Shelter.mvc
 		public Startup(IConfiguration configuration)
 		{
 			Configuration = configuration;
-			_connectionString = $@"Server={"Db"}; Database={"Shelter"}; User={"root"}; Password={"root"}; Port={"3306"}";
+			//_connectionString = $@"Server={"db-server"}; Database={"shelter"}; User={"root"}; Password={"root"}; Port={"3306"}";
+			_connectionString = $@"Server={"db-server"}; Database={"shelter"}; Uid={"root"}; Pwd={"root"}";
 		}
 		public IConfiguration Configuration { get; }
 		// This method gets called by the runtime. Use this method to add services to the container.
@@ -32,22 +33,23 @@ namespace Shelter.mvc
 			WaitForDBInit(_connectionString);
 			services.AddControllersWithViews();
 			//services.AddDbContext<ShelterContext>(options => options.UseSqlite(Configuration.GetConnectionString("ShelterContext")));
-			services.AddDbContext<ShelterContext>(options => options.UseMySql(_connectionString, b => b.MigrationsAssembly("Shelter.mvc")));
+			services.AddDbContext<ShelterContext>(options => options.UseMySql(_connectionString, builder =>
+			{
+				builder.MigrationsAssembly("Shelter.mvc");
+				builder.EnableRetryOnFailure(
+					maxRetryCount: 4,
+					maxRetryDelay: TimeSpan.FromMilliseconds(2000),
+					errorNumbersToAdd: null);
+			})
+			.EnableSensitiveDataLogging()
+			.EnableDetailedErrors());
+
 			services.AddScoped<IDatabaseInitializer, DatabaseInitializer>();
 			services.AddScoped<IShelterDataAccess, ShelterDataAccess>();
 			services.AddSwaggerGen(c =>
 				{
 					c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Shelter API", Version = "v1" });
 				});
-
-			//other service configurations go here
-			//replace "YourDbContext" with the class name of you DbContext
-			/*services.AddDbContextPool<ShelterContext>(options => options
-				//replace with your connection string
-				.UseMySql("Server=db;Database=shelter;User=root;Password=root,Port=3306;"), mySqlOptions => (
-				// replace with your Server version and Type
-				.ServerVersion(new ServerVersion(new Version(8, 5, 5), ServerType.MySql))
-				));*/
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -98,7 +100,7 @@ namespace Shelter.mvc
 			{
 				try
 				{
-					Console.WriteLine("Connecting to db. Trial: {0}", retries);
+					Console.WriteLine("Connecting to db-server. Trial: {0}", retries);
 					connection.Open();
 					connection.Close();
 					break;
