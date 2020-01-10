@@ -3,8 +3,8 @@ using Shelter.mvc.Controllers;
 using Moq;
 using Shelter.mvc;
 using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Shelter.UnitTests
 {
@@ -36,7 +36,7 @@ namespace Shelter.UnitTests
         public void Test_GetAll()
         {
 
-            var shelters = new List<Shelter.Shared.Shelter>();
+            var shelters = new List<Shelter.shared.Shelter>();
 
             _mockedDataAccess.Setup(x => x.GetAllShelters()).Returns(shelters);
 
@@ -54,7 +54,7 @@ namespace Shelter.UnitTests
         public void Test_GetAllAnimals()
         {
             //vraag alle shelters op en geef te terug
-            var shelters = new List<Shelter.Shared.Shelter>();
+            var shelters = new List<Shelter.shared.Shelter>();
             _mockedDataAccess.Setup(x => x.GetAllSheltersFull()).Returns(shelters);
 
             var result = _controller.GetAllSheltersFull();
@@ -73,16 +73,11 @@ namespace Shelter.UnitTests
             {
               //vraag alle shelters op en geef te terug
              var shelters = new List<Shelter.Shared.Shelter>();
-
               _mockedDataAccess.Setup(x => x.CheckIfUnique()).Returns(shelters);
-
               var result = _controller.CheckIfUnique();
-
               Assert.IsInstanceOf(typeof(OkObjectResult), result);
               Assert.AreEqual(((OkObjectResult)result).Value, shelters);
             }
-
-
         */
 
         /* 
@@ -94,13 +89,10 @@ namespace Shelter.UnitTests
                 Name = "abc"
               };
               _mockedDataAccess.Setup(x => x.CheckIfUnique(2)).Returns(shelter);
-
               var result = _controller.CheckIfUnique(2);
-
               Assert.IsInstanceOf(typeof(OkObjectResult), result);
               Assert.AreEqual(((OkObjectResult)result).Value, shelter);
             }
-
             */
         /* 
             [Test]
@@ -110,7 +102,6 @@ namespace Shelter.UnitTests
               var result = _controller.GetShelter(2);
               Assert.IsInstanceOf(typeof(NotFoundResult), result);
             }
-
           */
     }
 }

@@ -17,6 +17,7 @@ namespace Shelter.mvc.Controllers
     [Route("[controller]")]
     public class ApiController : ControllerBase
     {
+
         private readonly IShelterDataAccess _dataAccess;
         private readonly ILogger<ApiController> _logger;
 
@@ -125,7 +126,7 @@ namespace Shelter.mvc.Controllers
         public IActionResult CheckIfUnique(int shelterId, string animalName)
         {
             var animal = _dataAccess.CheckIfUnique(shelterId, animalName);
-            return animal == default(Shared.Animal) ? (IActionResult)NotFound() : Ok(animal);
+            return animal == default(shared.Animal) ? (IActionResult)NotFound() : Ok(animal);
         }
 
     }
