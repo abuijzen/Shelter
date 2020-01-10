@@ -72,7 +72,7 @@ namespace Shelter.UnitTests
             public void Test_checkUnique()
             {
               //vraag alle shelters op en geef te terug
-             var shelters = new List<Shelter.Shared.Shelter>();
+             var shelters = new List<Shelter.shared.Shelter>();
               _mockedDataAccess.Setup(x => x.CheckIfUnique()).Returns(shelters);
               var result = _controller.CheckIfUnique();
               Assert.IsInstanceOf(typeof(OkObjectResult), result);
@@ -80,20 +80,22 @@ namespace Shelter.UnitTests
             }
         */
 
-        /* 
+         /* 
             [Test]
             public void Test_CheckIfUnique()
             {
-              var shelter = new Shelter.Shared.Shelter()
+              var shelter = new Shelter.shared.Shelter()
               {
                 Name = "abc"
               };
-              _mockedDataAccess.Setup(x => x.CheckIfUnique(2)).Returns(shelter);
-              var result = _controller.CheckIfUnique(2);
+              _mockedDataAccess.Setup(x => x.CheckIfUnique(2,"felix")).Returns(shelters);
+              var result = _controller.CheckIfUnique(2,"felix");
               Assert.IsInstanceOf(typeof(OkObjectResult), result);
               Assert.AreEqual(((OkObjectResult)result).Value, shelter);
             }
+
             */
+            
         /* 
             [Test]
             public void Test_GetOneNotFound()
