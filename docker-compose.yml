@@ -14,16 +14,16 @@ services:
       - db-server
     networks:
       - localdev
-
   db-server:
-    container_name: db-server
-    image: mysql:5.7
+    container_name: db
+    image: mysql:8.0.18
     environment:
-      - "MYSQL_DATABASE=shelter"
-      - "MYSQL_USER=root"
-      - "MYSQL_PASSWORD=root"
-      - "MYSQL_ROOT_PASSWORD=root"
+      MYSQL_HOST: localhost
+      MYSQL_ROOT_HOST: localhost
+      MYSQL_DATABASE: shelter
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
     ports:
-      - "1400:1433"
+      - "1433:1433"
     networks:
       - localdev
