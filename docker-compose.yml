@@ -6,6 +6,7 @@ networks:
 
 services:
   main-api:
+    container_name: main-api
     build: .
     restart: always
     ports:
@@ -26,12 +27,14 @@ services:
     volumes:
       - dbvol:/var/lib/mysql
     environment:
+      MYSQL_HOST: localhost
+      MYSQL_ROOT_HOST: localhost
       MYSQL_DATABASE: shelter
       MYSQL_USER: root
       MYSQL_PASSWORD: root
       MYSQL_ROOT_PASSWORD: root
     ports:
-      - "3306:33060"
+      - "3306:3306"
     networks:
       - localdev
 

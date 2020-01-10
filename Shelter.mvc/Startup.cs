@@ -58,6 +58,13 @@ namespace Shelter.mvc
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IDatabaseInitializer databaseInitializer, ShelterContext context)
 		{
+			using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>()
+			.CreateScope())
+			{
+				serviceScope.ServiceProvider.GetService<ShelterContext>()
+					.Database.Migrate();
+			}
+
 			if (env.IsDevelopment())
 			{
 				app.UseDeveloperExceptionPage();
@@ -88,9 +95,8 @@ namespace Shelter.mvc
 					pattern: "{controller=Home}/{action=Index}/{id?}");
 			});
 
-			//databaseInitializer.Initialize();
-
 			context.Database.Migrate();
+			databaseInitializer.Initialize();
 		}
 
 
