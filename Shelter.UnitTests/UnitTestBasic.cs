@@ -30,8 +30,8 @@ namespace Shelter.UnitTests
 		}
 
 
-		/* testen of je alle shelters kan opvragen en teruggeven
-		+ checken of de inhoud volledig hetzelfde is van beide*/
+		/* testen of je alle shelters kan opvragen en teruggeven*/
+		//+ checken of de inhoud volledig hetzelfde is van beide
 		[Test]
 		public void Test_GetAll()
 		{
@@ -49,52 +49,19 @@ namespace Shelter.UnitTests
 			Assert.AreEqual(((OkObjectResult)result).Value, shelters);
 		}
 
-		/*Check of combinatie dier-type (hond, kat of konijn) en naam binnen één shelter uniek is. */
-		/* momenteel = alle dieren checken en kijken of de inhoud die teruggegeven wordt ook klopt */
 
 		[Test]
 		public void Test_GetAllAnimals()
 		{
-
+			//vraag alle shelters op en geef te terug
 			var shelters = new List<Shelter.shared.Shelter>();
-			_mockedDataAccess.Setup(x => x.GetShelterAnimals()).Returns(shelters);
+			_mockedDataAccess.Setup(x => x.GetAllSheltersFull()).Returns(shelters);
 
-			var result = _controller.GetShelterAnimals();
+			var result = _controller.GetAllSheltersFull();
 
-			// uncomment this obviously wrong line, see what happens
-			// Assert.IsInstanceOf(typeof(NotFoundResult), result);
-
+			//vergelijk of de inhoud van de shelter gelijk is aan de data die effectief in shelters zit
 			Assert.IsInstanceOf(typeof(OkObjectResult), result);
 			Assert.AreEqual(((OkObjectResult)result).Value, shelters);
 		}
-
-
-
-
-		/* 
-			[Test]
-			public void Test_GetOneHappyFlow()
-			{
-			  var shelter = new Shelter.shared.Shelter()
-			  {
-				Name = "abc"
-			  };
-			  _mockedDataAccess.Setup(x => x.GetShelterById(2)).Returns(shelter);
-
-			  var result = _controller.GetShelter(2);
-
-			  Assert.IsInstanceOf(typeof(OkObjectResult), result);
-			  Assert.AreEqual(((OkObjectResult)result).Value, shelter);
-			}
-
-			[Test]
-			public void Test_GetOneNotFound()
-			{
-			  _mockedDataAccess.Setup(x => x.GetShelterById(2)).Returns(default(Shelter.shared.Shelter));
-			  var result = _controller.GetShelter(2);
-			  Assert.IsInstanceOf(typeof(NotFoundResult), result);
-			}
-
-			*/
 	}
 }

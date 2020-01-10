@@ -8,6 +8,7 @@ namespace Shelter.shared
 	{
 		// Dit is een lege constructor die de base is bij cat, dog, rabbit
 
+		public int AnimalId { get; set; }
 		public string Name { get; set; }
 		public string Race { get; set; }
 		public DateTime DateOfBirth { get; set; }
