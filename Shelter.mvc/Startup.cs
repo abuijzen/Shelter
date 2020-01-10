@@ -31,7 +31,10 @@ namespace Shelter.mvc
 		public void ConfigureServices(IServiceCollection services)
 		{
 			WaitForDBInit(_connectionString);
+			services.AddMvc();
 			services.AddControllersWithViews();
+			services.AddScoped<IDatabaseInitializer, DatabaseInitializer>();
+			services.AddScoped<IShelterDataAccess, ShelterDataAccess>();
 			//services.AddDbContext<ShelterContext>(options => options.UseSqlite(Configuration.GetConnectionString("ShelterContext")));
 			services.AddDbContext<ShelterContext>(options => options.UseMySql(_connectionString, builder =>
 			{
@@ -85,7 +88,7 @@ namespace Shelter.mvc
 					pattern: "{controller=Home}/{action=Index}/{id?}");
 			});
 
-			databaseInitializer.Initialize();
+			//databaseInitializer.Initialize();
 
 			context.Database.Migrate();
 		}
