@@ -12,18 +12,29 @@ services:
       - "8080:80"
     depends_on:
       - db-server
+    volumes:
+      - appbuild:/app
+    links:
+      - db-server
     networks:
       - localdev
 
   db-server:
     container_name: db-server
     image: mysql:5.7
+    restart: always
+    volumes:
+      - dbvol:/var/lib/mysql
     environment:
       - "MYSQL_DATABASE=shelter"
-      - "MYSQL_USER=root"
-      - "MYSQL_PASSWORD=root"
+      - "MYSQL_USER=shelter"
+      - "MYSQL_PASSWORD=shelter"
       - "MYSQL_ROOT_PASSWORD=root"
     ports:
-      - "1400:1433"
+      - "3306:33060"
     networks:
       - localdev
+
+volumes:
+  appbuild:
+  dbvol:
