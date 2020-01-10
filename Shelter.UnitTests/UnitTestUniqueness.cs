@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Moq;
 using NUnit.Framework;
-using Shelter.Mvc;
-using Shelter.Shared;
+using Shelter.mvc;
+using Shelter.shared;
 
 namespace Shelter.UnitTests
 {
@@ -18,7 +18,7 @@ namespace Shelter.UnitTests
     [Test]
     public void Unique_NoAnimalsExistInShelter()
     {
-      _dataAccess.Setup(x => x.GetShelterByIdWithAnimals(12)).Returns(new Shared.Shelter()
+      _dataAccess.Setup(x => x.GetShelterByIdWithAnimals(12)).Returns(new shared.Shelter()
       {
         Animals = new List<Animal>()
       });
@@ -29,7 +29,7 @@ namespace Shelter.UnitTests
     [Test]
     public void Unique_AnotherAnimalsExistInShelterButDifferentName()
     {
-      _dataAccess.Setup(x => x.GetShelterByIdWithAnimals(12)).Returns(new Shared.Shelter()
+      _dataAccess.Setup(x => x.GetShelterByIdWithAnimals(12)).Returns(new shared.Shelter()
       {
         Animals = new List<Animal> {
           new Animal {
