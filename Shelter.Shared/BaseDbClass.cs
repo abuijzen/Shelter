@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic; 
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Shelter.Shared
+namespace Shelter.shared
 {
   public class BaseDbClass
   {

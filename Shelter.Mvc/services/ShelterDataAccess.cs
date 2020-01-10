@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using Shelter.Shared;
+using Shelter.shared;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -8,9 +8,9 @@ namespace Shelter.Mvc
 {
   public interface IShelterDataAccess
   {
-    IEnumerable<Shared.Shelter> GetAllShelters();
-    IEnumerable<Shared.Shelter> GetAllSheltersFull();
-    Shared.Shelter GetShelterById(int id);
+    IEnumerable<shared.Shelter> GetAllShelters();
+    IEnumerable<shared.Shelter> GetAllSheltersFull();
+    shared.Shelter GetShelterById(int id);
     IEnumerable<Animal> GetAnimals(int shelterId);
     Animal GetAnimalByShelterAndId(int shelterId, int animalId);
     Animal CheckIfUnique(int shelterId, string animalName);
@@ -25,12 +25,12 @@ namespace Shelter.Mvc
       _context = context;
     }
 
-    public IEnumerable<Shared.Shelter> GetAllShelters()
+    public IEnumerable<shared.Shelter> GetAllShelters()
     {
       return _context.Shelters;
     }
 
-    public IEnumerable<Shared.Shelter> GetAllSheltersFull()
+    public IEnumerable<shared.Shelter> GetAllSheltersFull()
     {
       return _context.Shelters
         .Include(shelter => shelter.Animals)
@@ -50,7 +50,7 @@ namespace Shelter.Mvc
         .FirstOrDefault(x => x.Id == shelterId)?.Animals;
     }
 
-    public Shared.Shelter GetShelterById(int id)
+    public shared.Shelter GetShelterById(int id)
     {
       return _context.Shelters.FirstOrDefault(x => x.Id == id);
     }
@@ -61,7 +61,7 @@ namespace Shelter.Mvc
       //zoek shelter op id
       var shelter = this.GetShelterByIdWithAnimals(shelterId);
       //als er geen shelter gevonden wordt
-      if (shelter == default(Shelter.Shared.Shelter))
+      if (shelter == default(Shelter.shared.Shelter))
       {
         return default(Animal);
       }
@@ -93,7 +93,7 @@ namespace Shelter.Mvc
 
     // Needs to be virtual as we're going to mock this
 
-    public virtual Shared.Shelter GetShelterByIdWithAnimals(int id)
+    public virtual shared.Shelter GetShelterByIdWithAnimals(int id)
     {
       return _context.Shelters.Include(x => x.Animals).FirstOrDefault(x => x.Id == id);
     }

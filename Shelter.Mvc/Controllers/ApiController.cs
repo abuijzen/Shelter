@@ -2,14 +2,13 @@ using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
-using Shelter.Shared;
+using Shelter.shared;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mime;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Shelter.Mvc;
 
 namespace Shelter.Mvc.Controllers
 {
@@ -28,7 +27,7 @@ namespace Shelter.Mvc.Controllers
 
 		[HttpGet]
 		/* Alle dieren van ons 1ne asiel zijn hier te vinden, maar dit zou een lijst moeten worden van alle namen +ids van de asielen*/
-		public ActionResult<Shelter.Shared.Shelter> Index()
+		public ActionResult<Shelter.shared.Shelter> Index()
 		{
 			return Ok(_dataAccess.GetAllSheltersFull());
 		}
@@ -51,7 +50,7 @@ namespace Shelter.Mvc.Controllers
     		{
     
       			var shelter = _dataAccess.GetShelterById(id); 
-      			return shelter == default(Shared.Shelter) ? (IActionResult)NotFound() : Ok(shelter);
+      			return shelter == default(shared.Shelter) ? (IActionResult)NotFound() : Ok(shelter);
     }
 
 
@@ -74,11 +73,11 @@ namespace Shelter.Mvc.Controllers
 		public IActionResult GetAnimalDetails(int shelterId, int animalId)
 		{
 			var animal = _dataAccess.GetAnimalByShelterAndId(shelterId, animalId);
-			return animal == default(Shared.Animal) ? (IActionResult)NotFound() : Ok(animal);
+			return animal == default(shared.Animal) ? (IActionResult)NotFound() : Ok(animal);
 		}
 
 		[HttpPut("{shelterId}/animals/{animalId}")]
-		public IActionResult UpdateAnimal(int shelterId, int animalId, [FromBody]Shared.Animal animal)
+		public IActionResult UpdateAnimal(int shelterId, int animalId, [FromBody]shared.Animal animal)
 		{
 			return Ok(animal);
 		}
@@ -88,7 +87,7 @@ namespace Shelter.Mvc.Controllers
 		public IActionResult CheckIfUnique(int shelterId, string animalName)
 		{
 			var animal = _dataAccess.CheckIfUnique(shelterId, animalName);
-			return animal == default(Shared.Animal) ? (IActionResult)NotFound() : Ok(animal);
+			return animal == default(shared.Animal) ? (IActionResult)NotFound() : Ok(animal);
 		}
 
 	}

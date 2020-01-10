@@ -36,7 +36,7 @@ namespace Shelter.UnitTests
     public void Test_GetAll()
     {
 
-      var shelters = new List<Shelter.Shared.Shelter>();
+      var shelters = new List<Shelter.shared.Shelter>();
 
       _mockedDataAccess.Setup(x => x.GetAllShelters()).Returns(shelters);
 
@@ -54,7 +54,7 @@ namespace Shelter.UnitTests
     public void Test_GetAllAnimals()
     {
       //vraag alle shelters op en geef te terug
-      var shelters = new List<Shelter.Shared.Shelter>();
+      var shelters = new List<Shelter.shared.Shelter>();
       _mockedDataAccess.Setup(x => x.GetAllSheltersFull()).Returns(shelters);
 
       var result = _controller.GetAllSheltersFull();

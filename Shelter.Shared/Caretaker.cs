@@ -1,4 +1,4 @@
-namespace Shelter.Shared
+namespace Shelter.shared
 {
 	public class Caretaker : Employees
 	{

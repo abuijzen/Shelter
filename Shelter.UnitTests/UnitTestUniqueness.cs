@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Moq;
 using NUnit.Framework;
-using Shelter.mvc;
+using Shelter.Mvc;
 using Shelter.shared;
 
 namespace Shelter.UnitTests
