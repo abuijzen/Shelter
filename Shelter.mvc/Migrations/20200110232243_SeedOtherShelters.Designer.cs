@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Shelter.shared;
 
 namespace Shelter.mvc.Migrations
 {
     [DbContext(typeof(ShelterContext))]
-    partial class ShelterContextModelSnapshot : ModelSnapshot
+    [Migration("20200110232243_SeedOtherShelters")]
+    partial class SeedOtherShelters
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

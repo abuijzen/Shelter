@@ -3,6 +3,7 @@ using System.Linq;
 using Shelter.shared;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
+using System;
 
 namespace Shelter.mvc
 {
@@ -14,9 +15,9 @@ namespace Shelter.mvc
 		IEnumerable<Animal> GetAnimals(int shelterId);
 		Animal GetAnimalByShelterAndId(int shelterId, int animalId);
 		void DeleteAnimalByshelterIdAndId(int shelterId, int animalId);
-		void CreateCat(Cat cat);
-		void CreateRabbit(Rabbit rabbit);
-		void CreateDog(Dog dog);
+		//void CreateCat(Cat cat);
+		//void CreateRabbit(Rabbit rabbit);
+		//void CreateDog(Dog dog);
 		void CreateShelter(shared.Shelter shelter);
 		void UpdateAnimal(int shelterId, int animalId, Animal animal);
 	}
@@ -71,7 +72,7 @@ namespace Shelter.mvc
 			_context.SaveChanges();
 		}
 
-		public void CreateCat(Cat cat)
+		/*public void CreateCat(Cat cat)
 		{
 			var newCat = new Cat();
 
@@ -91,20 +92,21 @@ namespace Shelter.mvc
 
 			.Add(newCat);
 			_context.SaveChanges();
-		}
-		public void CreateRabbit(Rabbit rabbit)
+		}*/
+
+		/*public void CreateRabbit(Rabbit rabbit)
 		{
 			_context.Animals
 			.Add(rabbit);
 			_context.SaveChanges();
-		}
+		}*/
 
-		public void CreateDog(Dog dog)
+		/*public void CreateDog(Dog dog)
 		{
 			_context.Animals
 			.Add(dog);
 			_context.SaveChanges();
-		}
+		}*/
 
 		public void CreateShelter(shared.Shelter shelter)
 		{

@@ -4,9 +4,10 @@ using System.Collections.Generic;
 
 namespace Shelter.shared
 {
-	public class Animal : BaseDbClass
+	public class Animal
 	{
 		// Dit is een lege constructor die de base is bij cat, dog, rabbit
+		public int Id { get; set; }
 		public string Name { get; set; }
 		public string Race { get; set; }
 		public DateTime DateOfBirth { get; set; }

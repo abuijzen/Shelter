@@ -84,7 +84,7 @@ namespace Shelter.mvc.Controllers
 			return Ok();
 		}
 
-		[HttpPost("animals/cat")]
+		/*[HttpPost("animals/cat")]
 		public IActionResult CreateCat([FromBody]shared.Cat cat)
 		{
 			_dataAccess.CreateCat(cat);
@@ -102,7 +102,7 @@ namespace Shelter.mvc.Controllers
 		{
 			_dataAccess.CreateDog(dog);
 			return Ok();
-		}
+		}*/
 
 		[HttpPost("shelters")]
 		public IActionResult CreateShelter([FromBody]shared.Shelter shelter)

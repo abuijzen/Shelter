@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Shelter.shared;
 
 namespace Shelter.mvc.Migrations
 {
     [DbContext(typeof(ShelterContext))]
-    partial class ShelterContextModelSnapshot : ModelSnapshot
+    [Migration("20200110230206_SeedShelter1Animals")]
+    partial class SeedShelter1Animals
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -152,216 +154,6 @@ namespace Shelter.mvc.Migrations
                             Race = "Mopshond",
                             ShelterId = 1,
                             Since = new DateTime(2018, 9, 10, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Allergies = "geen",
-                            Bio = "Ludo is een lievertje maar niet voor andere dieren.",
-                            DateOfBirth = new DateTime(2015, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsAnimalFriendly = false,
-                            IsFertile = false,
-                            IsKidFriendly = true,
-                            IsSpeciesFriendly = false,
-                            Name = "Ludo",
-                            Race = "Europeese korthaar",
-                            ShelterId = 2,
-                            Since = new DateTime(2018, 2, 21, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Allergies = "Kip",
-                            Bio = "Puk is een echte ronkende franse buldog, door gezondheidsproblemen is hij bij ons beland",
-                            DateOfBirth = new DateTime(2018, 9, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsAnimalFriendly = true,
-                            IsFertile = false,
-                            IsKidFriendly = true,
-                            IsSpeciesFriendly = true,
-                            Name = "Puk",
-                            Race = "Franse Bulldog",
-                            ShelterId = 2,
-                            Since = new DateTime(2019, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Allergies = "geen",
-                            Bio = "Moesti is een echte dierenvriend van kleine kinderen houden ze niet",
-                            DateOfBirth = new DateTime(2014, 3, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsAnimalFriendly = true,
-                            IsFertile = false,
-                            IsKidFriendly = false,
-                            IsSpeciesFriendly = true,
-                            Name = "Moesti",
-                            Race = "Europeese korthaar",
-                            ShelterId = 2,
-                            Since = new DateTime(2016, 7, 17, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Allergies = "geen",
-                            Bio = "Marcel is een oude gek, op zijn oude dag heeft hij nog veel liefde voor tennisballen",
-                            DateOfBirth = new DateTime(2009, 10, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsAnimalFriendly = true,
-                            IsFertile = false,
-                            IsKidFriendly = true,
-                            IsSpeciesFriendly = true,
-                            Name = "Marcel",
-                            Race = "Teckel",
-                            ShelterId = 2,
-                            Since = new DateTime(2019, 9, 20, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 11,
-                            Allergies = "geen",
-                            Bio = "Olaf is een vinnig beestje, perfect voor jonge gezinnen",
-                            DateOfBirth = new DateTime(2017, 10, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsAnimalFriendly = true,
-                            IsFertile = false,
-                            IsKidFriendly = true,
-                            IsSpeciesFriendly = true,
-                            Name = "Olaf",
-                            Race = "Rijnlander",
-                            ShelterId = 2,
-                            Since = new DateTime(2018, 10, 17, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 12,
-                            Allergies = "geen",
-                            Bio = "Garret houd van kinderen en mensen, van andere dieren gaat hij lopen.",
-                            DateOfBirth = new DateTime(2015, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsAnimalFriendly = false,
-                            IsFertile = false,
-                            IsKidFriendly = true,
-                            IsSpeciesFriendly = false,
-                            Name = "Garret",
-                            Race = "Franse Hangoor",
-                            ShelterId = 2,
-                            Since = new DateTime(2019, 10, 11, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 13,
-                            Allergies = "geen",
-                            Bio = "Astrix is een grote jongen die veel liefde geeft",
-                            DateOfBirth = new DateTime(2017, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsAnimalFriendly = false,
-                            IsFertile = false,
-                            IsKidFriendly = true,
-                            IsSpeciesFriendly = true,
-                            Name = "Astrix",
-                            Race = "Mastino Napoletano",
-                            ShelterId = 2,
-                            Since = new DateTime(2018, 10, 22, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 14,
-                            Allergies = "kip",
-                            Bio = "Rock is een grote dikke vriend van iedereen",
-                            DateOfBirth = new DateTime(2016, 9, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsAnimalFriendly = true,
-                            IsFertile = false,
-                            IsKidFriendly = true,
-                            IsSpeciesFriendly = true,
-                            Name = "Rock",
-                            Race = "Staffordshire Bull Terrier",
-                            ShelterId = 2,
-                            Since = new DateTime(2017, 11, 9, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 15,
-                            Allergies = "geen",
-                            Bio = "Een kat met de nodige kattenstreken.",
-                            DateOfBirth = new DateTime(2003, 7, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsAnimalFriendly = false,
-                            IsFertile = true,
-                            IsKidFriendly = false,
-                            IsSpeciesFriendly = false,
-                            Name = "Wolf",
-                            Race = "Bombay ",
-                            ShelterId = 3,
-                            Since = new DateTime(2004, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 16,
-                            Allergies = "geen",
-                            Bio = "Een lieverd, begroet iedereen met een kopstootje.",
-                            DateOfBirth = new DateTime(2007, 3, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsAnimalFriendly = true,
-                            IsFertile = false,
-                            IsKidFriendly = true,
-                            IsSpeciesFriendly = true,
-                            Name = "Pom pom",
-                            Race = "Bengaalse tijgerkat",
-                            ShelterId = 3,
-                            Since = new DateTime(2010, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 17,
-                            Allergies = "wortels",
-                            Bio = "Nijntje, lief klein konijntje.",
-                            DateOfBirth = new DateTime(2018, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsAnimalFriendly = true,
-                            IsFertile = true,
-                            IsKidFriendly = true,
-                            IsSpeciesFriendly = false,
-                            Name = "Nijntje",
-                            Race = "Kleurdwerg",
-                            ShelterId = 2,
-                            Since = new DateTime(2018, 8, 6, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 18,
-                            Allergies = "rinitis",
-                            Bio = "Een witte konijn met een hoge aaibaarheidsfactor.",
-                            DateOfBirth = new DateTime(2019, 8, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsAnimalFriendly = true,
-                            IsFertile = false,
-                            IsKidFriendly = true,
-                            IsSpeciesFriendly = false,
-                            Name = "Sneeuwtje",
-                            Race = "Amerikaanse konijn",
-                            ShelterId = 3,
-                            Since = new DateTime(2019, 10, 30, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 19,
-                            Allergies = "geen",
-                            Bio = "Mimi is bang voor veel dingen maar overwint haar angsten voor haar baasjes.",
-                            DateOfBirth = new DateTime(2002, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsAnimalFriendly = false,
-                            IsFertile = false,
-                            IsKidFriendly = true,
-                            IsSpeciesFriendly = false,
-                            Name = "Mimi",
-                            Race = "Pommeriaan",
-                            ShelterId = 3,
-                            Since = new DateTime(2018, 2, 27, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 20,
-                            Allergies = "kip",
-                            Bio = "Een jong meisje met klasse, dat is Elisabeth III",
-                            DateOfBirth = new DateTime(2019, 10, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsAnimalFriendly = true,
-                            IsFertile = false,
-                            IsKidFriendly = true,
-                            IsSpeciesFriendly = true,
-                            Name = "Elisabeth III",
-                            Race = "Bobtail",
-                            ShelterId = 3,
-                            Since = new DateTime(2019, 11, 28, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -398,26 +190,6 @@ namespace Shelter.mvc.Migrations
                         {
                             Id = 5,
                             Clawed = true
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Clawed = true
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Clawed = true
-                        },
-                        new
-                        {
-                            Id = 15,
-                            Clawed = true
-                        },
-                        new
-                        {
-                            Id = 16,
-                            Clawed = true
                         });
                 });
 
@@ -439,36 +211,6 @@ namespace Shelter.mvc.Migrations
                         {
                             Id = 6,
                             Barker = false
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Barker = true
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Barker = false
-                        },
-                        new
-                        {
-                            Id = 13,
-                            Barker = true
-                        },
-                        new
-                        {
-                            Id = 14,
-                            Barker = true
-                        },
-                        new
-                        {
-                            Id = 19,
-                            Barker = true
-                        },
-                        new
-                        {
-                            Id = 20,
-                            Barker = true
                         });
                 });
 
@@ -513,48 +255,6 @@ namespace Shelter.mvc.Migrations
                         {
                             Id = 3,
                             Size = "groot"
-                        },
-                        new
-                        {
-                            Id = 7
-                        },
-                        new
-                        {
-                            Id = 8
-                        },
-                        new
-                        {
-                            Id = 9
-                        },
-                        new
-                        {
-                            Id = 10
-                        },
-                        new
-                        {
-                            Id = 11
-                        },
-                        new
-                        {
-                            Id = 12
-                        },
-                        new
-                        {
-                            Id = 13
-                        },
-                        new
-                        {
-                            Id = 14
-                        },
-                        new
-                        {
-                            Id = 17,
-                            Size = "small"
-                        },
-                        new
-                        {
-                            Id = 18,
-                            Size = "small"
                         });
                 });
 
