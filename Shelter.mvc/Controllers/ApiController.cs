@@ -122,7 +122,7 @@ namespace Shelter.mvc.Controllers
 
 
 
-        [HttpGet("{shelterId}/animals/{animalName}")]
+        [HttpGet("{shelterId}/animalName/{animalName}")]
         public IActionResult CheckIfUnique(int shelterId, string animalName)
         {
             var animal = _dataAccess.CheckIfUnique(shelterId, animalName);

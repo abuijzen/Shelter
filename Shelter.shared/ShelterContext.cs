@@ -8,6 +8,7 @@ namespace Shelter.shared
 		{
 
 		}
+		//tabllen maken voor in de DB
 		public DbSet<Animal> Animals { get; set; }
 		public DbSet<Shelter> Shelters { get; set; }
 		public DbSet<Employees> Employees { get; set; }

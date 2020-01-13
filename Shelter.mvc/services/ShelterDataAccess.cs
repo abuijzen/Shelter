@@ -4,6 +4,7 @@ using Shelter.shared;
 using Microsoft.EntityFrameworkCore;
 using System;
 
+
 namespace Shelter.mvc
 {
     public interface IShelterDataAccess
